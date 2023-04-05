@@ -1,0 +1,8356 @@
+# Created by Vlad 
+ 
+#Major and minor version 
+0 1 
+27 # number of tags 
+# Types 
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+4 poll
+27 # number of types
+#Types
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+3 obj
+# -------------- Object 0 Epineurium -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+6 # number of verticies
+# Verticies
+# X Y dom tol
+0.005000 0.000495 -1 1.4142135623730951e-10
+0.005000 -0.000360 -1 1.4142135623730951e-10
+0.004727 -0.000500 -1 1.4142135623730951e-10
+-0.005000 -0.000500 -1 1.4142135623730951e-10
+-0.005000 0.000500 -1 1.4142135623730951e-10
+0.004971 0.000500 -1 1.4142135623730951e-10
+
+6 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 1 0 1 0 1 6 NAN
+6 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.005000 0.000495 1
+0.005000 -0.000360 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.005000 -0.000360 1
+0.004727 -0.000500 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.004727 -0.000500 1
+-0.005000 -0.000500 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.005000 -0.000500 1
+-0.005000 0.000500 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.005000 0.000500 1
+0.004971 0.000500 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.004971 0.000500 1
+0.005000 0.000495 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 1 Peri1 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.001922 0.000146 -1 1.4142135623730951e-10
+-0.001938 0.000246 -1 1.4142135623730951e-10
+-0.001984 0.000336 -1 1.4142135623730951e-10
+-0.002055 0.000408 -1 1.4142135623730951e-10
+-0.002146 0.000454 -1 1.4142135623730951e-10
+-0.002246 0.000470 -1 1.4142135623730951e-10
+-0.002346 0.000454 -1 1.4142135623730951e-10
+-0.002436 0.000408 -1 1.4142135623730951e-10
+-0.002508 0.000336 -1 1.4142135623730951e-10
+-0.002554 0.000246 -1 1.4142135623730951e-10
+-0.002570 0.000146 -1 1.4142135623730951e-10
+-0.002554 0.000046 -1 1.4142135623730951e-10
+-0.002508 -0.000045 -1 1.4142135623730951e-10
+-0.002436 -0.000116 -1 1.4142135623730951e-10
+-0.002346 -0.000162 -1 1.4142135623730951e-10
+-0.002246 -0.000178 -1 1.4142135623730951e-10
+-0.002146 -0.000162 -1 1.4142135623730951e-10
+-0.002055 -0.000116 -1 1.4142135623730951e-10
+-0.001984 -0.000045 -1 1.4142135623730951e-10
+-0.001938 0.000046 -1 1.4142135623730951e-10
+-0.001922 0.000146 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001922 0.000146 1
+-0.001938 0.000246 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001938 0.000246 1
+-0.001984 0.000336 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001984 0.000336 1
+-0.002055 0.000408 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002055 0.000408 1
+-0.002146 0.000454 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002146 0.000454 1
+-0.002246 0.000470 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002246 0.000470 1
+-0.002346 0.000454 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002346 0.000454 1
+-0.002436 0.000408 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002436 0.000408 1
+-0.002508 0.000336 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002508 0.000336 1
+-0.002554 0.000246 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002554 0.000246 1
+-0.002570 0.000146 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002570 0.000146 1
+-0.002554 0.000046 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002554 0.000046 1
+-0.002508 -0.000045 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002508 -0.000045 1
+-0.002436 -0.000116 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002436 -0.000116 1
+-0.002346 -0.000162 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002346 -0.000162 1
+-0.002246 -0.000178 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002246 -0.000178 1
+-0.002146 -0.000162 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002146 -0.000162 1
+-0.002055 -0.000116 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002055 -0.000116 1
+-0.001984 -0.000045 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001984 -0.000045 1
+-0.001938 0.000046 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001938 0.000046 1
+-0.001922 0.000146 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001922 0.000146 1
+-0.001922 0.000146 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 2 Peri2 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.001462 0.000146 -1 1.4142135623730951e-10
+-0.001472 0.000207 -1 1.4142135623730951e-10
+-0.001500 0.000263 -1 1.4142135623730951e-10
+-0.001544 0.000307 -1 1.4142135623730951e-10
+-0.001600 0.000336 -1 1.4142135623730951e-10
+-0.001662 0.000345 -1 1.4142135623730951e-10
+-0.001723 0.000336 -1 1.4142135623730951e-10
+-0.001779 0.000307 -1 1.4142135623730951e-10
+-0.001823 0.000263 -1 1.4142135623730951e-10
+-0.001852 0.000207 -1 1.4142135623730951e-10
+-0.001862 0.000146 -1 1.4142135623730951e-10
+-0.001852 0.000084 -1 1.4142135623730951e-10
+-0.001823 0.000028 -1 1.4142135623730951e-10
+-0.001779 -0.000016 -1 1.4142135623730951e-10
+-0.001723 -0.000044 -1 1.4142135623730951e-10
+-0.001662 -0.000054 -1 1.4142135623730951e-10
+-0.001600 -0.000044 -1 1.4142135623730951e-10
+-0.001544 -0.000016 -1 1.4142135623730951e-10
+-0.001500 0.000028 -1 1.4142135623730951e-10
+-0.001472 0.000084 -1 1.4142135623730951e-10
+-0.001462 0.000146 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001462 0.000146 1
+-0.001472 0.000207 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001472 0.000207 1
+-0.001500 0.000263 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001500 0.000263 1
+-0.001544 0.000307 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001544 0.000307 1
+-0.001600 0.000336 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001600 0.000336 1
+-0.001662 0.000345 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001662 0.000345 1
+-0.001723 0.000336 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001723 0.000336 1
+-0.001779 0.000307 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001779 0.000307 1
+-0.001823 0.000263 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001823 0.000263 1
+-0.001852 0.000207 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001852 0.000207 1
+-0.001862 0.000146 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001862 0.000146 1
+-0.001852 0.000084 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001852 0.000084 1
+-0.001823 0.000028 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001823 0.000028 1
+-0.001779 -0.000016 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001779 -0.000016 1
+-0.001723 -0.000044 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001723 -0.000044 1
+-0.001662 -0.000054 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001662 -0.000054 1
+-0.001600 -0.000044 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001600 -0.000044 1
+-0.001544 -0.000016 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001544 -0.000016 1
+-0.001500 0.000028 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001500 0.000028 1
+-0.001472 0.000084 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001472 0.000084 1
+-0.001462 0.000146 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001462 0.000146 1
+-0.001462 0.000146 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 3 Peri3 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.001158 -0.000274 -1 1.4142135623730951e-10
+-0.001168 -0.000213 -1 1.4142135623730951e-10
+-0.001196 -0.000159 -1 1.4142135623730951e-10
+-0.001239 -0.000115 -1 1.4142135623730951e-10
+-0.001294 -0.000088 -1 1.4142135623730951e-10
+-0.001354 -0.000078 -1 1.4142135623730951e-10
+-0.001415 -0.000088 -1 1.4142135623730951e-10
+-0.001469 -0.000115 -1 1.4142135623730951e-10
+-0.001513 -0.000159 -1 1.4142135623730951e-10
+-0.001541 -0.000213 -1 1.4142135623730951e-10
+-0.001550 -0.000274 -1 1.4142135623730951e-10
+-0.001541 -0.000335 -1 1.4142135623730951e-10
+-0.001513 -0.000389 -1 1.4142135623730951e-10
+-0.001469 -0.000433 -1 1.4142135623730951e-10
+-0.001415 -0.000460 -1 1.4142135623730951e-10
+-0.001354 -0.000470 -1 1.4142135623730951e-10
+-0.001294 -0.000460 -1 1.4142135623730951e-10
+-0.001239 -0.000433 -1 1.4142135623730951e-10
+-0.001196 -0.000389 -1 1.4142135623730951e-10
+-0.001168 -0.000335 -1 1.4142135623730951e-10
+-0.001158 -0.000274 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001158 -0.000274 1
+-0.001168 -0.000213 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001168 -0.000213 1
+-0.001196 -0.000159 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001196 -0.000159 1
+-0.001239 -0.000115 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001239 -0.000115 1
+-0.001294 -0.000088 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001294 -0.000088 1
+-0.001354 -0.000078 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001354 -0.000078 1
+-0.001415 -0.000088 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001415 -0.000088 1
+-0.001469 -0.000115 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001469 -0.000115 1
+-0.001513 -0.000159 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001513 -0.000159 1
+-0.001541 -0.000213 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001541 -0.000213 1
+-0.001550 -0.000274 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001550 -0.000274 1
+-0.001541 -0.000335 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001541 -0.000335 1
+-0.001513 -0.000389 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001513 -0.000389 1
+-0.001469 -0.000433 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001469 -0.000433 1
+-0.001415 -0.000460 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001415 -0.000460 1
+-0.001354 -0.000470 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001354 -0.000470 1
+-0.001294 -0.000460 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001294 -0.000460 1
+-0.001239 -0.000433 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001239 -0.000433 1
+-0.001196 -0.000389 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001196 -0.000389 1
+-0.001168 -0.000335 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001168 -0.000335 1
+-0.001158 -0.000274 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001158 -0.000274 1
+-0.001158 -0.000274 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 4 Peri4 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.000555 -0.000219 -1 1.4142135623730951e-10
+-0.000568 -0.000142 -1 1.4142135623730951e-10
+-0.000603 -0.000072 -1 1.4142135623730951e-10
+-0.000659 -0.000017 -1 1.4142135623730951e-10
+-0.000728 0.000019 -1 1.4142135623730951e-10
+-0.000806 0.000031 -1 1.4142135623730951e-10
+-0.000883 0.000019 -1 1.4142135623730951e-10
+-0.000953 -0.000017 -1 1.4142135623730951e-10
+-0.001009 -0.000072 -1 1.4142135623730951e-10
+-0.001044 -0.000142 -1 1.4142135623730951e-10
+-0.001057 -0.000219 -1 1.4142135623730951e-10
+-0.001044 -0.000297 -1 1.4142135623730951e-10
+-0.001009 -0.000367 -1 1.4142135623730951e-10
+-0.000953 -0.000422 -1 1.4142135623730951e-10
+-0.000883 -0.000458 -1 1.4142135623730951e-10
+-0.000806 -0.000470 -1 1.4142135623730951e-10
+-0.000728 -0.000458 -1 1.4142135623730951e-10
+-0.000659 -0.000422 -1 1.4142135623730951e-10
+-0.000603 -0.000367 -1 1.4142135623730951e-10
+-0.000568 -0.000297 -1 1.4142135623730951e-10
+-0.000555 -0.000219 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000555 -0.000219 1
+-0.000568 -0.000142 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000568 -0.000142 1
+-0.000603 -0.000072 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000603 -0.000072 1
+-0.000659 -0.000017 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000659 -0.000017 1
+-0.000728 0.000019 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000728 0.000019 1
+-0.000806 0.000031 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000806 0.000031 1
+-0.000883 0.000019 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000883 0.000019 1
+-0.000953 -0.000017 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000953 -0.000017 1
+-0.001009 -0.000072 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001009 -0.000072 1
+-0.001044 -0.000142 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001044 -0.000142 1
+-0.001057 -0.000219 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001057 -0.000219 1
+-0.001044 -0.000297 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001044 -0.000297 1
+-0.001009 -0.000367 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001009 -0.000367 1
+-0.000953 -0.000422 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000953 -0.000422 1
+-0.000883 -0.000458 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000883 -0.000458 1
+-0.000806 -0.000470 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000806 -0.000470 1
+-0.000728 -0.000458 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000728 -0.000458 1
+-0.000659 -0.000422 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000659 -0.000422 1
+-0.000603 -0.000367 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000603 -0.000367 1
+-0.000568 -0.000297 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000568 -0.000297 1
+-0.000555 -0.000219 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000555 -0.000219 1
+-0.000555 -0.000219 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 5 Peri5 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.000322 0.000246 -1 1.4142135623730951e-10
+-0.000333 0.000315 -1 1.4142135623730951e-10
+-0.000365 0.000378 -1 1.4142135623730951e-10
+-0.000414 0.000427 -1 1.4142135623730951e-10
+-0.000477 0.000459 -1 1.4142135623730951e-10
+-0.000546 0.000470 -1 1.4142135623730951e-10
+-0.000615 0.000459 -1 1.4142135623730951e-10
+-0.000678 0.000427 -1 1.4142135623730951e-10
+-0.000727 0.000378 -1 1.4142135623730951e-10
+-0.000759 0.000315 -1 1.4142135623730951e-10
+-0.000770 0.000246 -1 1.4142135623730951e-10
+-0.000759 0.000177 -1 1.4142135623730951e-10
+-0.000727 0.000114 -1 1.4142135623730951e-10
+-0.000678 0.000065 -1 1.4142135623730951e-10
+-0.000615 0.000033 -1 1.4142135623730951e-10
+-0.000546 0.000022 -1 1.4142135623730951e-10
+-0.000477 0.000033 -1 1.4142135623730951e-10
+-0.000414 0.000065 -1 1.4142135623730951e-10
+-0.000365 0.000114 -1 1.4142135623730951e-10
+-0.000333 0.000177 -1 1.4142135623730951e-10
+-0.000322 0.000246 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000322 0.000246 1
+-0.000333 0.000315 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000333 0.000315 1
+-0.000365 0.000378 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000365 0.000378 1
+-0.000414 0.000427 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000414 0.000427 1
+-0.000477 0.000459 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000477 0.000459 1
+-0.000546 0.000470 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000546 0.000470 1
+-0.000615 0.000459 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000615 0.000459 1
+-0.000678 0.000427 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000678 0.000427 1
+-0.000727 0.000378 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000727 0.000378 1
+-0.000759 0.000315 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000759 0.000315 1
+-0.000770 0.000246 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000770 0.000246 1
+-0.000759 0.000177 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000759 0.000177 1
+-0.000727 0.000114 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000727 0.000114 1
+-0.000678 0.000065 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000678 0.000065 1
+-0.000615 0.000033 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000615 0.000033 1
+-0.000546 0.000022 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000546 0.000022 1
+-0.000477 0.000033 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000477 0.000033 1
+-0.000414 0.000065 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000414 0.000065 1
+-0.000365 0.000114 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000365 0.000114 1
+-0.000333 0.000177 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000333 0.000177 1
+-0.000322 0.000246 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000322 0.000246 1
+-0.000322 0.000246 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 6 Peri6 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.000000 -0.000259 -1 1.4142135623730951e-10
+-0.000011 -0.000190 -1 1.4142135623730951e-10
+-0.000042 -0.000129 -1 1.4142135623730951e-10
+-0.000091 -0.000080 -1 1.4142135623730951e-10
+-0.000153 -0.000048 -1 1.4142135623730951e-10
+-0.000222 -0.000038 -1 1.4142135623730951e-10
+-0.000290 -0.000048 -1 1.4142135623730951e-10
+-0.000352 -0.000080 -1 1.4142135623730951e-10
+-0.000401 -0.000129 -1 1.4142135623730951e-10
+-0.000432 -0.000190 -1 1.4142135623730951e-10
+-0.000443 -0.000259 -1 1.4142135623730951e-10
+-0.000432 -0.000327 -1 1.4142135623730951e-10
+-0.000401 -0.000389 -1 1.4142135623730951e-10
+-0.000352 -0.000438 -1 1.4142135623730951e-10
+-0.000290 -0.000469 -1 1.4142135623730951e-10
+-0.000222 -0.000480 -1 1.4142135623730951e-10
+-0.000153 -0.000469 -1 1.4142135623730951e-10
+-0.000091 -0.000438 -1 1.4142135623730951e-10
+-0.000042 -0.000389 -1 1.4142135623730951e-10
+-0.000011 -0.000327 -1 1.4142135623730951e-10
+-0.000000 -0.000259 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000000 -0.000259 1
+-0.000011 -0.000190 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000011 -0.000190 1
+-0.000042 -0.000129 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000042 -0.000129 1
+-0.000091 -0.000080 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000091 -0.000080 1
+-0.000153 -0.000048 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000153 -0.000048 1
+-0.000222 -0.000038 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000222 -0.000038 1
+-0.000290 -0.000048 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000290 -0.000048 1
+-0.000352 -0.000080 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000352 -0.000080 1
+-0.000401 -0.000129 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000401 -0.000129 1
+-0.000432 -0.000190 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000432 -0.000190 1
+-0.000443 -0.000259 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000443 -0.000259 1
+-0.000432 -0.000327 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000432 -0.000327 1
+-0.000401 -0.000389 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000401 -0.000389 1
+-0.000352 -0.000438 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000352 -0.000438 1
+-0.000290 -0.000469 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000290 -0.000469 1
+-0.000222 -0.000480 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000222 -0.000480 1
+-0.000153 -0.000469 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000153 -0.000469 1
+-0.000091 -0.000438 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000091 -0.000438 1
+-0.000042 -0.000389 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000042 -0.000389 1
+-0.000011 -0.000327 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000011 -0.000327 1
+-0.000000 -0.000259 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000000 -0.000259 1
+-0.000000 -0.000259 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 7 Peri7 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.000387 0.000198 -1 1.4142135623730951e-10
+0.000373 0.000284 -1 1.4142135623730951e-10
+0.000333 0.000362 -1 1.4142135623730951e-10
+0.000272 0.000424 -1 1.4142135623730951e-10
+0.000194 0.000464 -1 1.4142135623730951e-10
+0.000107 0.000477 -1 1.4142135623730951e-10
+0.000021 0.000464 -1 1.4142135623730951e-10
+-0.000057 0.000424 -1 1.4142135623730951e-10
+-0.000119 0.000362 -1 1.4142135623730951e-10
+-0.000159 0.000284 -1 1.4142135623730951e-10
+-0.000172 0.000198 -1 1.4142135623730951e-10
+-0.000159 0.000111 -1 1.4142135623730951e-10
+-0.000119 0.000033 -1 1.4142135623730951e-10
+-0.000057 -0.000028 -1 1.4142135623730951e-10
+0.000021 -0.000068 -1 1.4142135623730951e-10
+0.000107 -0.000082 -1 1.4142135623730951e-10
+0.000194 -0.000068 -1 1.4142135623730951e-10
+0.000272 -0.000028 -1 1.4142135623730951e-10
+0.000333 0.000033 -1 1.4142135623730951e-10
+0.000373 0.000111 -1 1.4142135623730951e-10
+0.000387 0.000198 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000387 0.000198 1
+0.000373 0.000284 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000373 0.000284 1
+0.000333 0.000362 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000333 0.000362 1
+0.000272 0.000424 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000272 0.000424 1
+0.000194 0.000464 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000194 0.000464 1
+0.000107 0.000477 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000107 0.000477 1
+0.000021 0.000464 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000021 0.000464 1
+-0.000057 0.000424 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000057 0.000424 1
+-0.000119 0.000362 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000119 0.000362 1
+-0.000159 0.000284 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000159 0.000284 1
+-0.000172 0.000198 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000172 0.000198 1
+-0.000159 0.000111 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000159 0.000111 1
+-0.000119 0.000033 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000119 0.000033 1
+-0.000057 -0.000028 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000057 -0.000028 1
+0.000021 -0.000068 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000021 -0.000068 1
+0.000107 -0.000082 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000107 -0.000082 1
+0.000194 -0.000068 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000194 -0.000068 1
+0.000272 -0.000028 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000272 -0.000028 1
+0.000333 0.000033 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000333 0.000033 1
+0.000373 0.000111 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000373 0.000111 1
+0.000387 0.000198 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000387 0.000198 1
+0.000387 0.000198 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 8 Peri8 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.000577 -0.000268 -1 1.4142135623730951e-10
+0.000567 -0.000206 -1 1.4142135623730951e-10
+0.000538 -0.000149 -1 1.4142135623730951e-10
+0.000493 -0.000104 -1 1.4142135623730951e-10
+0.000437 -0.000075 -1 1.4142135623730951e-10
+0.000374 -0.000065 -1 1.4142135623730951e-10
+0.000311 -0.000075 -1 1.4142135623730951e-10
+0.000254 -0.000104 -1 1.4142135623730951e-10
+0.000210 -0.000149 -1 1.4142135623730951e-10
+0.000181 -0.000206 -1 1.4142135623730951e-10
+0.000171 -0.000268 -1 1.4142135623730951e-10
+0.000181 -0.000331 -1 1.4142135623730951e-10
+0.000210 -0.000388 -1 1.4142135623730951e-10
+0.000254 -0.000433 -1 1.4142135623730951e-10
+0.000311 -0.000462 -1 1.4142135623730951e-10
+0.000374 -0.000471 -1 1.4142135623730951e-10
+0.000437 -0.000462 -1 1.4142135623730951e-10
+0.000493 -0.000433 -1 1.4142135623730951e-10
+0.000538 -0.000388 -1 1.4142135623730951e-10
+0.000567 -0.000331 -1 1.4142135623730951e-10
+0.000577 -0.000268 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000577 -0.000268 1
+0.000567 -0.000206 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000567 -0.000206 1
+0.000538 -0.000149 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000538 -0.000149 1
+0.000493 -0.000104 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000493 -0.000104 1
+0.000437 -0.000075 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000437 -0.000075 1
+0.000374 -0.000065 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000374 -0.000065 1
+0.000311 -0.000075 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000311 -0.000075 1
+0.000254 -0.000104 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000254 -0.000104 1
+0.000210 -0.000149 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000210 -0.000149 1
+0.000181 -0.000206 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000181 -0.000206 1
+0.000171 -0.000268 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000171 -0.000268 1
+0.000181 -0.000331 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000181 -0.000331 1
+0.000210 -0.000388 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000210 -0.000388 1
+0.000254 -0.000433 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000254 -0.000433 1
+0.000311 -0.000462 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000311 -0.000462 1
+0.000374 -0.000471 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000374 -0.000471 1
+0.000437 -0.000462 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000437 -0.000462 1
+0.000493 -0.000433 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000493 -0.000433 1
+0.000538 -0.000388 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000538 -0.000388 1
+0.000567 -0.000331 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000567 -0.000331 1
+0.000577 -0.000268 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000577 -0.000268 1
+0.000577 -0.000268 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 9 Peri9 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.001591 -0.000218 -1 1.4142135623730951e-10
+0.001579 -0.000140 -1 1.4142135623730951e-10
+0.001543 -0.000070 -1 1.4142135623730951e-10
+0.001488 -0.000014 -1 1.4142135623730951e-10
+0.001417 0.000022 -1 1.4142135623730951e-10
+0.001339 0.000034 -1 1.4142135623730951e-10
+0.001261 0.000022 -1 1.4142135623730951e-10
+0.001191 -0.000014 -1 1.4142135623730951e-10
+0.001135 -0.000070 -1 1.4142135623730951e-10
+0.001099 -0.000140 -1 1.4142135623730951e-10
+0.001087 -0.000218 -1 1.4142135623730951e-10
+0.001099 -0.000296 -1 1.4142135623730951e-10
+0.001135 -0.000366 -1 1.4142135623730951e-10
+0.001191 -0.000422 -1 1.4142135623730951e-10
+0.001261 -0.000458 -1 1.4142135623730951e-10
+0.001339 -0.000470 -1 1.4142135623730951e-10
+0.001417 -0.000458 -1 1.4142135623730951e-10
+0.001488 -0.000422 -1 1.4142135623730951e-10
+0.001543 -0.000366 -1 1.4142135623730951e-10
+0.001579 -0.000296 -1 1.4142135623730951e-10
+0.001591 -0.000218 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001591 -0.000218 1
+0.001579 -0.000140 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001579 -0.000140 1
+0.001543 -0.000070 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001543 -0.000070 1
+0.001488 -0.000014 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001488 -0.000014 1
+0.001417 0.000022 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001417 0.000022 1
+0.001339 0.000034 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001339 0.000034 1
+0.001261 0.000022 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001261 0.000022 1
+0.001191 -0.000014 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001191 -0.000014 1
+0.001135 -0.000070 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001135 -0.000070 1
+0.001099 -0.000140 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001099 -0.000140 1
+0.001087 -0.000218 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001087 -0.000218 1
+0.001099 -0.000296 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001099 -0.000296 1
+0.001135 -0.000366 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001135 -0.000366 1
+0.001191 -0.000422 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001191 -0.000422 1
+0.001261 -0.000458 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001261 -0.000458 1
+0.001339 -0.000470 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001339 -0.000470 1
+0.001417 -0.000458 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001417 -0.000458 1
+0.001488 -0.000422 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001488 -0.000422 1
+0.001543 -0.000366 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001543 -0.000366 1
+0.001579 -0.000296 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001579 -0.000296 1
+0.001591 -0.000218 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001591 -0.000218 1
+0.001591 -0.000218 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 10 Peri10 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.001137 0.000136 -1 1.4142135623730951e-10
+0.001121 0.000239 -1 1.4142135623730951e-10
+0.001074 0.000332 -1 1.4142135623730951e-10
+0.001000 0.000406 -1 1.4142135623730951e-10
+0.000907 0.000454 -1 1.4142135623730951e-10
+0.000804 0.000470 -1 1.4142135623730951e-10
+0.000700 0.000454 -1 1.4142135623730951e-10
+0.000607 0.000406 -1 1.4142135623730951e-10
+0.000533 0.000332 -1 1.4142135623730951e-10
+0.000486 0.000239 -1 1.4142135623730951e-10
+0.000470 0.000136 -1 1.4142135623730951e-10
+0.000486 0.000033 -1 1.4142135623730951e-10
+0.000533 -0.000060 -1 1.4142135623730951e-10
+0.000607 -0.000134 -1 1.4142135623730951e-10
+0.000700 -0.000181 -1 1.4142135623730951e-10
+0.000804 -0.000198 -1 1.4142135623730951e-10
+0.000907 -0.000181 -1 1.4142135623730951e-10
+0.001000 -0.000134 -1 1.4142135623730951e-10
+0.001074 -0.000060 -1 1.4142135623730951e-10
+0.001121 0.000033 -1 1.4142135623730951e-10
+0.001137 0.000136 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001137 0.000136 1
+0.001121 0.000239 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001121 0.000239 1
+0.001074 0.000332 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001074 0.000332 1
+0.001000 0.000406 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001000 0.000406 1
+0.000907 0.000454 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000907 0.000454 1
+0.000804 0.000470 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000804 0.000470 1
+0.000700 0.000454 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000700 0.000454 1
+0.000607 0.000406 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000607 0.000406 1
+0.000533 0.000332 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000533 0.000332 1
+0.000486 0.000239 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000486 0.000239 1
+0.000470 0.000136 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000470 0.000136 1
+0.000486 0.000033 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000486 0.000033 1
+0.000533 -0.000060 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000533 -0.000060 1
+0.000607 -0.000134 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000607 -0.000134 1
+0.000700 -0.000181 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000700 -0.000181 1
+0.000804 -0.000198 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000804 -0.000198 1
+0.000907 -0.000181 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000907 -0.000181 1
+0.001000 -0.000134 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001000 -0.000134 1
+0.001074 -0.000060 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001074 -0.000060 1
+0.001121 0.000033 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001121 0.000033 1
+0.001137 0.000136 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001137 0.000136 1
+0.001137 0.000136 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 11 Peri11 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.002037 0.000198 -1 1.4142135623730951e-10
+0.002023 0.000285 -1 1.4142135623730951e-10
+0.001983 0.000363 -1 1.4142135623730951e-10
+0.001921 0.000425 -1 1.4142135623730951e-10
+0.001843 0.000465 -1 1.4142135623730951e-10
+0.001756 0.000479 -1 1.4142135623730951e-10
+0.001669 0.000465 -1 1.4142135623730951e-10
+0.001590 0.000425 -1 1.4142135623730951e-10
+0.001528 0.000363 -1 1.4142135623730951e-10
+0.001488 0.000285 -1 1.4142135623730951e-10
+0.001474 0.000198 -1 1.4142135623730951e-10
+0.001488 0.000111 -1 1.4142135623730951e-10
+0.001528 0.000032 -1 1.4142135623730951e-10
+0.001590 -0.000030 -1 1.4142135623730951e-10
+0.001669 -0.000070 -1 1.4142135623730951e-10
+0.001756 -0.000084 -1 1.4142135623730951e-10
+0.001843 -0.000070 -1 1.4142135623730951e-10
+0.001921 -0.000030 -1 1.4142135623730951e-10
+0.001983 0.000032 -1 1.4142135623730951e-10
+0.002023 0.000111 -1 1.4142135623730951e-10
+0.002037 0.000198 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002037 0.000198 1
+0.002023 0.000285 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002023 0.000285 1
+0.001983 0.000363 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001983 0.000363 1
+0.001921 0.000425 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001921 0.000425 1
+0.001843 0.000465 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001843 0.000465 1
+0.001756 0.000479 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001756 0.000479 1
+0.001669 0.000465 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001669 0.000465 1
+0.001590 0.000425 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001590 0.000425 1
+0.001528 0.000363 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001528 0.000363 1
+0.001488 0.000285 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001488 0.000285 1
+0.001474 0.000198 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001474 0.000198 1
+0.001488 0.000111 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001488 0.000111 1
+0.001528 0.000032 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001528 0.000032 1
+0.001590 -0.000030 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001590 -0.000030 1
+0.001669 -0.000070 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001669 -0.000070 1
+0.001756 -0.000084 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001756 -0.000084 1
+0.001843 -0.000070 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001843 -0.000070 1
+0.001921 -0.000030 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001921 -0.000030 1
+0.001983 0.000032 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001983 0.000032 1
+0.002023 0.000111 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002023 0.000111 1
+0.002037 0.000198 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002037 0.000198 1
+0.002037 0.000198 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 12 Peri12 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+20 # number of verticies
+# Verticies
+# X Y dom tol
+0.001847 -0.000364 -1 1.4142135623730951e-10
+0.001841 -0.000329 -1 1.4142135623730951e-10
+0.001825 -0.000298 -1 1.4142135623730951e-10
+0.001800 -0.000274 -1 1.4142135623730951e-10
+0.001769 -0.000258 -1 1.4142135623730951e-10
+0.001735 -0.000252 -1 1.4142135623730951e-10
+0.001700 -0.000258 -1 1.4142135623730951e-10
+0.001669 -0.000274 -1 1.4142135623730951e-10
+0.001644 -0.000298 -1 1.4142135623730951e-10
+0.001628 -0.000329 -1 1.4142135623730951e-10
+0.001623 -0.000364 -1 1.4142135623730951e-10
+0.001628 -0.000398 -1 1.4142135623730951e-10
+0.001644 -0.000430 -1 1.4142135623730951e-10
+0.001669 -0.000454 -1 1.4142135623730951e-10
+0.001700 -0.000470 -1 1.4142135623730951e-10
+0.001735 -0.000476 -1 1.4142135623730951e-10
+0.001769 -0.000470 -1 1.4142135623730951e-10
+0.001800 -0.000454 -1 1.4142135623730951e-10
+0.001825 -0.000430 -1 1.4142135623730951e-10
+0.001841 -0.000398 -1 1.4142135623730951e-10
+
+20 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 1 0 1 0 1 20 NAN
+20 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001847 -0.000364 1
+0.001841 -0.000329 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001841 -0.000329 1
+0.001825 -0.000298 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001825 -0.000298 1
+0.001800 -0.000274 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001800 -0.000274 1
+0.001769 -0.000258 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001769 -0.000258 1
+0.001735 -0.000252 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001735 -0.000252 1
+0.001700 -0.000258 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001700 -0.000258 1
+0.001669 -0.000274 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001669 -0.000274 1
+0.001644 -0.000298 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001644 -0.000298 1
+0.001628 -0.000329 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001628 -0.000329 1
+0.001623 -0.000364 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001623 -0.000364 1
+0.001628 -0.000398 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001628 -0.000398 1
+0.001644 -0.000430 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001644 -0.000430 1
+0.001669 -0.000454 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001669 -0.000454 1
+0.001700 -0.000470 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001700 -0.000470 1
+0.001735 -0.000476 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001735 -0.000476 1
+0.001769 -0.000470 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001769 -0.000470 1
+0.001800 -0.000454 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001800 -0.000454 1
+0.001825 -0.000430 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001825 -0.000430 1
+0.001841 -0.000398 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001841 -0.000398 1
+0.001847 -0.000364 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 13 Peri13 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.002307 -0.000258 -1 1.4142135623730951e-10
+0.002297 -0.000194 -1 1.4142135623730951e-10
+0.002267 -0.000135 -1 1.4142135623730951e-10
+0.002221 -0.000089 -1 1.4142135623730951e-10
+0.002163 -0.000060 -1 1.4142135623730951e-10
+0.002098 -0.000049 -1 1.4142135623730951e-10
+0.002034 -0.000060 -1 1.4142135623730951e-10
+0.001976 -0.000089 -1 1.4142135623730951e-10
+0.001930 -0.000135 -1 1.4142135623730951e-10
+0.001900 -0.000194 -1 1.4142135623730951e-10
+0.001890 -0.000258 -1 1.4142135623730951e-10
+0.001900 -0.000322 -1 1.4142135623730951e-10
+0.001930 -0.000381 -1 1.4142135623730951e-10
+0.001976 -0.000427 -1 1.4142135623730951e-10
+0.002034 -0.000456 -1 1.4142135623730951e-10
+0.002098 -0.000467 -1 1.4142135623730951e-10
+0.002163 -0.000456 -1 1.4142135623730951e-10
+0.002221 -0.000427 -1 1.4142135623730951e-10
+0.002267 -0.000381 -1 1.4142135623730951e-10
+0.002297 -0.000322 -1 1.4142135623730951e-10
+0.002307 -0.000258 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002307 -0.000258 1
+0.002297 -0.000194 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002297 -0.000194 1
+0.002267 -0.000135 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002267 -0.000135 1
+0.002221 -0.000089 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002221 -0.000089 1
+0.002163 -0.000060 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002163 -0.000060 1
+0.002098 -0.000049 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002098 -0.000049 1
+0.002034 -0.000060 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002034 -0.000060 1
+0.001976 -0.000089 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001976 -0.000089 1
+0.001930 -0.000135 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001930 -0.000135 1
+0.001900 -0.000194 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001900 -0.000194 1
+0.001890 -0.000258 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001890 -0.000258 1
+0.001900 -0.000322 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001900 -0.000322 1
+0.001930 -0.000381 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001930 -0.000381 1
+0.001976 -0.000427 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001976 -0.000427 1
+0.002034 -0.000456 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002034 -0.000456 1
+0.002098 -0.000467 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002098 -0.000467 1
+0.002163 -0.000456 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002163 -0.000456 1
+0.002221 -0.000427 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002221 -0.000427 1
+0.002267 -0.000381 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002267 -0.000381 1
+0.002297 -0.000322 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002297 -0.000322 1
+0.002307 -0.000258 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002307 -0.000258 1
+0.002307 -0.000258 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 14 Endo1 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.001941 0.000146 -1 1.4142135623730951e-10
+-0.001956 0.000240 -1 1.4142135623730951e-10
+-0.001999 0.000325 -1 1.4142135623730951e-10
+-0.002067 0.000392 -1 1.4142135623730951e-10
+-0.002152 0.000436 -1 1.4142135623730951e-10
+-0.002246 0.000451 -1 1.4142135623730951e-10
+-0.002340 0.000436 -1 1.4142135623730951e-10
+-0.002425 0.000392 -1 1.4142135623730951e-10
+-0.002492 0.000325 -1 1.4142135623730951e-10
+-0.002536 0.000240 -1 1.4142135623730951e-10
+-0.002551 0.000146 -1 1.4142135623730951e-10
+-0.002536 0.000052 -1 1.4142135623730951e-10
+-0.002492 -0.000033 -1 1.4142135623730951e-10
+-0.002425 -0.000101 -1 1.4142135623730951e-10
+-0.002340 -0.000144 -1 1.4142135623730951e-10
+-0.002246 -0.000159 -1 1.4142135623730951e-10
+-0.002152 -0.000144 -1 1.4142135623730951e-10
+-0.002067 -0.000101 -1 1.4142135623730951e-10
+-0.001999 -0.000033 -1 1.4142135623730951e-10
+-0.001956 0.000052 -1 1.4142135623730951e-10
+-0.001941 0.000146 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001941 0.000146 1
+-0.001956 0.000240 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001956 0.000240 1
+-0.001999 0.000325 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001999 0.000325 1
+-0.002067 0.000392 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002067 0.000392 1
+-0.002152 0.000436 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002152 0.000436 1
+-0.002246 0.000451 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002246 0.000451 1
+-0.002340 0.000436 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002340 0.000436 1
+-0.002425 0.000392 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002425 0.000392 1
+-0.002492 0.000325 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002492 0.000325 1
+-0.002536 0.000240 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002536 0.000240 1
+-0.002551 0.000146 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002551 0.000146 1
+-0.002536 0.000052 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002536 0.000052 1
+-0.002492 -0.000033 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002492 -0.000033 1
+-0.002425 -0.000101 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002425 -0.000101 1
+-0.002340 -0.000144 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002340 -0.000144 1
+-0.002246 -0.000159 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002246 -0.000159 1
+-0.002152 -0.000144 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002152 -0.000144 1
+-0.002067 -0.000101 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.002067 -0.000101 1
+-0.001999 -0.000033 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001999 -0.000033 1
+-0.001956 0.000052 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001956 0.000052 1
+-0.001941 0.000146 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001941 0.000146 1
+-0.001941 0.000146 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 15 Endo2 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.001474 0.000146 -1 1.4142135623730951e-10
+-0.001483 0.000204 -1 1.4142135623730951e-10
+-0.001510 0.000256 -1 1.4142135623730951e-10
+-0.001551 0.000298 -1 1.4142135623730951e-10
+-0.001604 0.000324 -1 1.4142135623730951e-10
+-0.001662 0.000333 -1 1.4142135623730951e-10
+-0.001720 0.000324 -1 1.4142135623730951e-10
+-0.001772 0.000298 -1 1.4142135623730951e-10
+-0.001814 0.000256 -1 1.4142135623730951e-10
+-0.001840 0.000204 -1 1.4142135623730951e-10
+-0.001850 0.000146 -1 1.4142135623730951e-10
+-0.001840 0.000088 -1 1.4142135623730951e-10
+-0.001814 0.000035 -1 1.4142135623730951e-10
+-0.001772 -0.000006 -1 1.4142135623730951e-10
+-0.001720 -0.000033 -1 1.4142135623730951e-10
+-0.001662 -0.000042 -1 1.4142135623730951e-10
+-0.001604 -0.000033 -1 1.4142135623730951e-10
+-0.001551 -0.000006 -1 1.4142135623730951e-10
+-0.001510 0.000035 -1 1.4142135623730951e-10
+-0.001483 0.000088 -1 1.4142135623730951e-10
+-0.001474 0.000146 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001474 0.000146 1
+-0.001483 0.000204 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001483 0.000204 1
+-0.001510 0.000256 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001510 0.000256 1
+-0.001551 0.000298 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001551 0.000298 1
+-0.001604 0.000324 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001604 0.000324 1
+-0.001662 0.000333 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001662 0.000333 1
+-0.001720 0.000324 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001720 0.000324 1
+-0.001772 0.000298 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001772 0.000298 1
+-0.001814 0.000256 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001814 0.000256 1
+-0.001840 0.000204 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001840 0.000204 1
+-0.001850 0.000146 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001850 0.000146 1
+-0.001840 0.000088 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001840 0.000088 1
+-0.001814 0.000035 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001814 0.000035 1
+-0.001772 -0.000006 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001772 -0.000006 1
+-0.001720 -0.000033 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001720 -0.000033 1
+-0.001662 -0.000042 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001662 -0.000042 1
+-0.001604 -0.000033 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001604 -0.000033 1
+-0.001551 -0.000006 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001551 -0.000006 1
+-0.001510 0.000035 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001510 0.000035 1
+-0.001483 0.000088 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001483 0.000088 1
+-0.001474 0.000146 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001474 0.000146 1
+-0.001474 0.000146 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 16 Endo3 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.001170 -0.000274 -1 1.4142135623730951e-10
+-0.001179 -0.000217 -1 1.4142135623730951e-10
+-0.001205 -0.000166 -1 1.4142135623730951e-10
+-0.001246 -0.000125 -1 1.4142135623730951e-10
+-0.001297 -0.000099 -1 1.4142135623730951e-10
+-0.001354 -0.000090 -1 1.4142135623730951e-10
+-0.001411 -0.000099 -1 1.4142135623730951e-10
+-0.001462 -0.000125 -1 1.4142135623730951e-10
+-0.001503 -0.000166 -1 1.4142135623730951e-10
+-0.001529 -0.000217 -1 1.4142135623730951e-10
+-0.001538 -0.000274 -1 1.4142135623730951e-10
+-0.001529 -0.000331 -1 1.4142135623730951e-10
+-0.001503 -0.000382 -1 1.4142135623730951e-10
+-0.001462 -0.000423 -1 1.4142135623730951e-10
+-0.001411 -0.000449 -1 1.4142135623730951e-10
+-0.001354 -0.000458 -1 1.4142135623730951e-10
+-0.001297 -0.000449 -1 1.4142135623730951e-10
+-0.001246 -0.000423 -1 1.4142135623730951e-10
+-0.001205 -0.000382 -1 1.4142135623730951e-10
+-0.001179 -0.000331 -1 1.4142135623730951e-10
+-0.001170 -0.000274 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001170 -0.000274 1
+-0.001179 -0.000217 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001179 -0.000217 1
+-0.001205 -0.000166 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001205 -0.000166 1
+-0.001246 -0.000125 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001246 -0.000125 1
+-0.001297 -0.000099 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001297 -0.000099 1
+-0.001354 -0.000090 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001354 -0.000090 1
+-0.001411 -0.000099 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001411 -0.000099 1
+-0.001462 -0.000125 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001462 -0.000125 1
+-0.001503 -0.000166 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001503 -0.000166 1
+-0.001529 -0.000217 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001529 -0.000217 1
+-0.001538 -0.000274 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001538 -0.000274 1
+-0.001529 -0.000331 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001529 -0.000331 1
+-0.001503 -0.000382 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001503 -0.000382 1
+-0.001462 -0.000423 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001462 -0.000423 1
+-0.001411 -0.000449 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001411 -0.000449 1
+-0.001354 -0.000458 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001354 -0.000458 1
+-0.001297 -0.000449 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001297 -0.000449 1
+-0.001246 -0.000423 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001246 -0.000423 1
+-0.001205 -0.000382 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001205 -0.000382 1
+-0.001179 -0.000331 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001179 -0.000331 1
+-0.001170 -0.000274 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001170 -0.000274 1
+-0.001170 -0.000274 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 17 Endo4 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.000570 -0.000219 -1 1.4142135623730951e-10
+-0.000582 -0.000147 -1 1.4142135623730951e-10
+-0.000615 -0.000081 -1 1.4142135623730951e-10
+-0.000667 -0.000029 -1 1.4142135623730951e-10
+-0.000733 0.000005 -1 1.4142135623730951e-10
+-0.000806 0.000016 -1 1.4142135623730951e-10
+-0.000879 0.000005 -1 1.4142135623730951e-10
+-0.000944 -0.000029 -1 1.4142135623730951e-10
+-0.000997 -0.000081 -1 1.4142135623730951e-10
+-0.001030 -0.000147 -1 1.4142135623730951e-10
+-0.001042 -0.000219 -1 1.4142135623730951e-10
+-0.001030 -0.000292 -1 1.4142135623730951e-10
+-0.000997 -0.000358 -1 1.4142135623730951e-10
+-0.000944 -0.000410 -1 1.4142135623730951e-10
+-0.000879 -0.000443 -1 1.4142135623730951e-10
+-0.000806 -0.000455 -1 1.4142135623730951e-10
+-0.000733 -0.000443 -1 1.4142135623730951e-10
+-0.000667 -0.000410 -1 1.4142135623730951e-10
+-0.000615 -0.000358 -1 1.4142135623730951e-10
+-0.000582 -0.000292 -1 1.4142135623730951e-10
+-0.000570 -0.000219 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000570 -0.000219 1
+-0.000582 -0.000147 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000582 -0.000147 1
+-0.000615 -0.000081 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000615 -0.000081 1
+-0.000667 -0.000029 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000667 -0.000029 1
+-0.000733 0.000005 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000733 0.000005 1
+-0.000806 0.000016 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000806 0.000016 1
+-0.000879 0.000005 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000879 0.000005 1
+-0.000944 -0.000029 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000944 -0.000029 1
+-0.000997 -0.000081 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000997 -0.000081 1
+-0.001030 -0.000147 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001030 -0.000147 1
+-0.001042 -0.000219 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001042 -0.000219 1
+-0.001030 -0.000292 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.001030 -0.000292 1
+-0.000997 -0.000358 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000997 -0.000358 1
+-0.000944 -0.000410 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000944 -0.000410 1
+-0.000879 -0.000443 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000879 -0.000443 1
+-0.000806 -0.000455 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000806 -0.000455 1
+-0.000733 -0.000443 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000733 -0.000443 1
+-0.000667 -0.000410 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000667 -0.000410 1
+-0.000615 -0.000358 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000615 -0.000358 1
+-0.000582 -0.000292 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000582 -0.000292 1
+-0.000570 -0.000219 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000570 -0.000219 1
+-0.000570 -0.000219 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 18 Endo5 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.000335 0.000246 -1 1.4142135623730951e-10
+-0.000346 0.000311 -1 1.4142135623730951e-10
+-0.000376 0.000370 -1 1.4142135623730951e-10
+-0.000422 0.000416 -1 1.4142135623730951e-10
+-0.000481 0.000446 -1 1.4142135623730951e-10
+-0.000546 0.000457 -1 1.4142135623730951e-10
+-0.000611 0.000446 -1 1.4142135623730951e-10
+-0.000670 0.000416 -1 1.4142135623730951e-10
+-0.000716 0.000370 -1 1.4142135623730951e-10
+-0.000746 0.000311 -1 1.4142135623730951e-10
+-0.000756 0.000246 -1 1.4142135623730951e-10
+-0.000746 0.000181 -1 1.4142135623730951e-10
+-0.000716 0.000122 -1 1.4142135623730951e-10
+-0.000670 0.000076 -1 1.4142135623730951e-10
+-0.000611 0.000046 -1 1.4142135623730951e-10
+-0.000546 0.000036 -1 1.4142135623730951e-10
+-0.000481 0.000046 -1 1.4142135623730951e-10
+-0.000422 0.000076 -1 1.4142135623730951e-10
+-0.000376 0.000122 -1 1.4142135623730951e-10
+-0.000346 0.000181 -1 1.4142135623730951e-10
+-0.000335 0.000246 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000335 0.000246 1
+-0.000346 0.000311 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000346 0.000311 1
+-0.000376 0.000370 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000376 0.000370 1
+-0.000422 0.000416 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000422 0.000416 1
+-0.000481 0.000446 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000481 0.000446 1
+-0.000546 0.000457 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000546 0.000457 1
+-0.000611 0.000446 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000611 0.000446 1
+-0.000670 0.000416 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000670 0.000416 1
+-0.000716 0.000370 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000716 0.000370 1
+-0.000746 0.000311 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000746 0.000311 1
+-0.000756 0.000246 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000756 0.000246 1
+-0.000746 0.000181 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000746 0.000181 1
+-0.000716 0.000122 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000716 0.000122 1
+-0.000670 0.000076 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000670 0.000076 1
+-0.000611 0.000046 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000611 0.000046 1
+-0.000546 0.000036 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000546 0.000036 1
+-0.000481 0.000046 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000481 0.000046 1
+-0.000422 0.000076 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000422 0.000076 1
+-0.000376 0.000122 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000376 0.000122 1
+-0.000346 0.000181 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000346 0.000181 1
+-0.000335 0.000246 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000335 0.000246 1
+-0.000335 0.000246 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 19 Endo6 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+-0.000013 -0.000259 -1 1.4142135623730951e-10
+-0.000024 -0.000195 -1 1.4142135623730951e-10
+-0.000053 -0.000137 -1 1.4142135623730951e-10
+-0.000099 -0.000091 -1 1.4142135623730951e-10
+-0.000157 -0.000061 -1 1.4142135623730951e-10
+-0.000222 -0.000051 -1 1.4142135623730951e-10
+-0.000286 -0.000061 -1 1.4142135623730951e-10
+-0.000344 -0.000091 -1 1.4142135623730951e-10
+-0.000390 -0.000137 -1 1.4142135623730951e-10
+-0.000420 -0.000195 -1 1.4142135623730951e-10
+-0.000430 -0.000259 -1 1.4142135623730951e-10
+-0.000420 -0.000323 -1 1.4142135623730951e-10
+-0.000390 -0.000381 -1 1.4142135623730951e-10
+-0.000344 -0.000427 -1 1.4142135623730951e-10
+-0.000286 -0.000457 -1 1.4142135623730951e-10
+-0.000222 -0.000467 -1 1.4142135623730951e-10
+-0.000157 -0.000457 -1 1.4142135623730951e-10
+-0.000099 -0.000427 -1 1.4142135623730951e-10
+-0.000053 -0.000381 -1 1.4142135623730951e-10
+-0.000024 -0.000323 -1 1.4142135623730951e-10
+-0.000013 -0.000259 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000013 -0.000259 1
+-0.000024 -0.000195 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000024 -0.000195 1
+-0.000053 -0.000137 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000053 -0.000137 1
+-0.000099 -0.000091 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000099 -0.000091 1
+-0.000157 -0.000061 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000157 -0.000061 1
+-0.000222 -0.000051 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000222 -0.000051 1
+-0.000286 -0.000061 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000286 -0.000061 1
+-0.000344 -0.000091 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000344 -0.000091 1
+-0.000390 -0.000137 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000390 -0.000137 1
+-0.000420 -0.000195 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000420 -0.000195 1
+-0.000430 -0.000259 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000430 -0.000259 1
+-0.000420 -0.000323 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000420 -0.000323 1
+-0.000390 -0.000381 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000390 -0.000381 1
+-0.000344 -0.000427 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000344 -0.000427 1
+-0.000286 -0.000457 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000286 -0.000457 1
+-0.000222 -0.000467 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000222 -0.000467 1
+-0.000157 -0.000457 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000157 -0.000457 1
+-0.000099 -0.000427 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000099 -0.000427 1
+-0.000053 -0.000381 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000053 -0.000381 1
+-0.000024 -0.000323 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000024 -0.000323 1
+-0.000013 -0.000259 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000013 -0.000259 1
+-0.000013 -0.000259 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 20 Endo7 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.000370 0.000198 -1 1.4142135623730951e-10
+0.000357 0.000279 -1 1.4142135623730951e-10
+0.000320 0.000352 -1 1.4142135623730951e-10
+0.000262 0.000410 -1 1.4142135623730951e-10
+0.000189 0.000448 -1 1.4142135623730951e-10
+0.000107 0.000461 -1 1.4142135623730951e-10
+0.000026 0.000448 -1 1.4142135623730951e-10
+-0.000047 0.000410 -1 1.4142135623730951e-10
+-0.000105 0.000352 -1 1.4142135623730951e-10
+-0.000143 0.000279 -1 1.4142135623730951e-10
+-0.000155 0.000198 -1 1.4142135623730951e-10
+-0.000143 0.000117 -1 1.4142135623730951e-10
+-0.000105 0.000043 -1 1.4142135623730951e-10
+-0.000047 -0.000015 -1 1.4142135623730951e-10
+0.000026 -0.000052 -1 1.4142135623730951e-10
+0.000107 -0.000065 -1 1.4142135623730951e-10
+0.000189 -0.000052 -1 1.4142135623730951e-10
+0.000262 -0.000015 -1 1.4142135623730951e-10
+0.000320 0.000043 -1 1.4142135623730951e-10
+0.000357 0.000117 -1 1.4142135623730951e-10
+0.000370 0.000198 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000370 0.000198 1
+0.000357 0.000279 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000357 0.000279 1
+0.000320 0.000352 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000320 0.000352 1
+0.000262 0.000410 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000262 0.000410 1
+0.000189 0.000448 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000189 0.000448 1
+0.000107 0.000461 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000107 0.000461 1
+0.000026 0.000448 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000026 0.000448 1
+-0.000047 0.000410 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000047 0.000410 1
+-0.000105 0.000352 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000105 0.000352 1
+-0.000143 0.000279 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000143 0.000279 1
+-0.000155 0.000198 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000155 0.000198 1
+-0.000143 0.000117 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000143 0.000117 1
+-0.000105 0.000043 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000105 0.000043 1
+-0.000047 -0.000015 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+-0.000047 -0.000015 1
+0.000026 -0.000052 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000026 -0.000052 1
+0.000107 -0.000065 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000107 -0.000065 1
+0.000189 -0.000052 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000189 -0.000052 1
+0.000262 -0.000015 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000262 -0.000015 1
+0.000320 0.000043 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000320 0.000043 1
+0.000357 0.000117 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000357 0.000117 1
+0.000370 0.000198 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000370 0.000198 1
+0.000370 0.000198 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 21 Endo8 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.000565 -0.000268 -1 1.4142135623730951e-10
+0.000555 -0.000209 -1 1.4142135623730951e-10
+0.000528 -0.000156 -1 1.4142135623730951e-10
+0.000486 -0.000114 -1 1.4142135623730951e-10
+0.000433 -0.000087 -1 1.4142135623730951e-10
+0.000374 -0.000077 -1 1.4142135623730951e-10
+0.000315 -0.000087 -1 1.4142135623730951e-10
+0.000262 -0.000114 -1 1.4142135623730951e-10
+0.000219 -0.000156 -1 1.4142135623730951e-10
+0.000192 -0.000209 -1 1.4142135623730951e-10
+0.000183 -0.000268 -1 1.4142135623730951e-10
+0.000192 -0.000327 -1 1.4142135623730951e-10
+0.000219 -0.000381 -1 1.4142135623730951e-10
+0.000262 -0.000423 -1 1.4142135623730951e-10
+0.000315 -0.000450 -1 1.4142135623730951e-10
+0.000374 -0.000459 -1 1.4142135623730951e-10
+0.000433 -0.000450 -1 1.4142135623730951e-10
+0.000486 -0.000423 -1 1.4142135623730951e-10
+0.000528 -0.000381 -1 1.4142135623730951e-10
+0.000555 -0.000327 -1 1.4142135623730951e-10
+0.000565 -0.000268 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000565 -0.000268 1
+0.000555 -0.000209 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000555 -0.000209 1
+0.000528 -0.000156 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000528 -0.000156 1
+0.000486 -0.000114 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000486 -0.000114 1
+0.000433 -0.000087 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000433 -0.000087 1
+0.000374 -0.000077 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000374 -0.000077 1
+0.000315 -0.000087 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000315 -0.000087 1
+0.000262 -0.000114 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000262 -0.000114 1
+0.000219 -0.000156 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000219 -0.000156 1
+0.000192 -0.000209 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000192 -0.000209 1
+0.000183 -0.000268 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000183 -0.000268 1
+0.000192 -0.000327 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000192 -0.000327 1
+0.000219 -0.000381 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000219 -0.000381 1
+0.000262 -0.000423 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000262 -0.000423 1
+0.000315 -0.000450 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000315 -0.000450 1
+0.000374 -0.000459 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000374 -0.000459 1
+0.000433 -0.000450 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000433 -0.000450 1
+0.000486 -0.000423 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000486 -0.000423 1
+0.000528 -0.000381 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000528 -0.000381 1
+0.000555 -0.000327 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000555 -0.000327 1
+0.000565 -0.000268 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000565 -0.000268 1
+0.000565 -0.000268 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 22 Endo9 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.001576 -0.000218 -1 1.4142135623730951e-10
+0.001565 -0.000145 -1 1.4142135623730951e-10
+0.001531 -0.000079 -1 1.4142135623730951e-10
+0.001479 -0.000026 -1 1.4142135623730951e-10
+0.001413 0.000008 -1 1.4142135623730951e-10
+0.001339 0.000019 -1 1.4142135623730951e-10
+0.001266 0.000008 -1 1.4142135623730951e-10
+0.001200 -0.000026 -1 1.4142135623730951e-10
+0.001148 -0.000079 -1 1.4142135623730951e-10
+0.001114 -0.000145 -1 1.4142135623730951e-10
+0.001102 -0.000218 -1 1.4142135623730951e-10
+0.001114 -0.000291 -1 1.4142135623730951e-10
+0.001148 -0.000357 -1 1.4142135623730951e-10
+0.001200 -0.000410 -1 1.4142135623730951e-10
+0.001266 -0.000443 -1 1.4142135623730951e-10
+0.001339 -0.000455 -1 1.4142135623730951e-10
+0.001413 -0.000443 -1 1.4142135623730951e-10
+0.001479 -0.000410 -1 1.4142135623730951e-10
+0.001531 -0.000357 -1 1.4142135623730951e-10
+0.001565 -0.000291 -1 1.4142135623730951e-10
+0.001576 -0.000218 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001576 -0.000218 1
+0.001565 -0.000145 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001565 -0.000145 1
+0.001531 -0.000079 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001531 -0.000079 1
+0.001479 -0.000026 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001479 -0.000026 1
+0.001413 0.000008 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001413 0.000008 1
+0.001339 0.000019 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001339 0.000019 1
+0.001266 0.000008 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001266 0.000008 1
+0.001200 -0.000026 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001200 -0.000026 1
+0.001148 -0.000079 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001148 -0.000079 1
+0.001114 -0.000145 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001114 -0.000145 1
+0.001102 -0.000218 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001102 -0.000218 1
+0.001114 -0.000291 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001114 -0.000291 1
+0.001148 -0.000357 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001148 -0.000357 1
+0.001200 -0.000410 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001200 -0.000410 1
+0.001266 -0.000443 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001266 -0.000443 1
+0.001339 -0.000455 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001339 -0.000455 1
+0.001413 -0.000443 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001413 -0.000443 1
+0.001479 -0.000410 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001479 -0.000410 1
+0.001531 -0.000357 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001531 -0.000357 1
+0.001565 -0.000291 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001565 -0.000291 1
+0.001576 -0.000218 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001576 -0.000218 1
+0.001576 -0.000218 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 23 Endo10 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.001117 0.000136 -1 1.4142135623730951e-10
+0.001102 0.000233 -1 1.4142135623730951e-10
+0.001057 0.000321 -1 1.4142135623730951e-10
+0.000988 0.000390 -1 1.4142135623730951e-10
+0.000901 0.000435 -1 1.4142135623730951e-10
+0.000804 0.000450 -1 1.4142135623730951e-10
+0.000707 0.000435 -1 1.4142135623730951e-10
+0.000619 0.000390 -1 1.4142135623730951e-10
+0.000550 0.000321 -1 1.4142135623730951e-10
+0.000505 0.000233 -1 1.4142135623730951e-10
+0.000490 0.000136 -1 1.4142135623730951e-10
+0.000505 0.000039 -1 1.4142135623730951e-10
+0.000550 -0.000048 -1 1.4142135623730951e-10
+0.000619 -0.000118 -1 1.4142135623730951e-10
+0.000707 -0.000162 -1 1.4142135623730951e-10
+0.000804 -0.000178 -1 1.4142135623730951e-10
+0.000901 -0.000162 -1 1.4142135623730951e-10
+0.000988 -0.000118 -1 1.4142135623730951e-10
+0.001057 -0.000048 -1 1.4142135623730951e-10
+0.001102 0.000039 -1 1.4142135623730951e-10
+0.001117 0.000136 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001117 0.000136 1
+0.001102 0.000233 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001102 0.000233 1
+0.001057 0.000321 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001057 0.000321 1
+0.000988 0.000390 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000988 0.000390 1
+0.000901 0.000435 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000901 0.000435 1
+0.000804 0.000450 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000804 0.000450 1
+0.000707 0.000435 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000707 0.000435 1
+0.000619 0.000390 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000619 0.000390 1
+0.000550 0.000321 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000550 0.000321 1
+0.000505 0.000233 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000505 0.000233 1
+0.000490 0.000136 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000490 0.000136 1
+0.000505 0.000039 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000505 0.000039 1
+0.000550 -0.000048 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000550 -0.000048 1
+0.000619 -0.000118 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000619 -0.000118 1
+0.000707 -0.000162 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000707 -0.000162 1
+0.000804 -0.000178 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000804 -0.000178 1
+0.000901 -0.000162 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000901 -0.000162 1
+0.000988 -0.000118 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.000988 -0.000118 1
+0.001057 -0.000048 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001057 -0.000048 1
+0.001102 0.000039 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001102 0.000039 1
+0.001117 0.000136 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001117 0.000136 1
+0.001117 0.000136 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 24 Endo11 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.002020 0.000198 -1 1.4142135623730951e-10
+0.002007 0.000279 -1 1.4142135623730951e-10
+0.001970 0.000353 -1 1.4142135623730951e-10
+0.001911 0.000412 -1 1.4142135623730951e-10
+0.001837 0.000449 -1 1.4142135623730951e-10
+0.001756 0.000462 -1 1.4142135623730951e-10
+0.001674 0.000449 -1 1.4142135623730951e-10
+0.001600 0.000412 -1 1.4142135623730951e-10
+0.001541 0.000353 -1 1.4142135623730951e-10
+0.001504 0.000279 -1 1.4142135623730951e-10
+0.001491 0.000198 -1 1.4142135623730951e-10
+0.001504 0.000116 -1 1.4142135623730951e-10
+0.001541 0.000042 -1 1.4142135623730951e-10
+0.001600 -0.000017 -1 1.4142135623730951e-10
+0.001674 -0.000054 -1 1.4142135623730951e-10
+0.001756 -0.000067 -1 1.4142135623730951e-10
+0.001837 -0.000054 -1 1.4142135623730951e-10
+0.001911 -0.000017 -1 1.4142135623730951e-10
+0.001970 0.000042 -1 1.4142135623730951e-10
+0.002007 0.000116 -1 1.4142135623730951e-10
+0.002020 0.000198 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002020 0.000198 1
+0.002007 0.000279 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002007 0.000279 1
+0.001970 0.000353 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001970 0.000353 1
+0.001911 0.000412 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001911 0.000412 1
+0.001837 0.000449 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001837 0.000449 1
+0.001756 0.000462 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001756 0.000462 1
+0.001674 0.000449 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001674 0.000449 1
+0.001600 0.000412 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001600 0.000412 1
+0.001541 0.000353 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001541 0.000353 1
+0.001504 0.000279 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001504 0.000279 1
+0.001491 0.000198 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001491 0.000198 1
+0.001504 0.000116 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001504 0.000116 1
+0.001541 0.000042 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001541 0.000042 1
+0.001600 -0.000017 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001600 -0.000017 1
+0.001674 -0.000054 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001674 -0.000054 1
+0.001756 -0.000067 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001756 -0.000067 1
+0.001837 -0.000054 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001837 -0.000054 1
+0.001911 -0.000017 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001911 -0.000017 1
+0.001970 0.000042 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001970 0.000042 1
+0.002007 0.000116 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002007 0.000116 1
+0.002020 0.000198 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002020 0.000198 1
+0.002020 0.000198 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 25 Endo12 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+20 # number of verticies
+# Verticies
+# X Y dom tol
+0.001840 -0.000364 -1 1.4142135623730951e-10
+0.001835 -0.000331 -1 1.4142135623730951e-10
+0.001820 -0.000302 -1 1.4142135623730951e-10
+0.001797 -0.000279 -1 1.4142135623730951e-10
+0.001767 -0.000264 -1 1.4142135623730951e-10
+0.001735 -0.000259 -1 1.4142135623730951e-10
+0.001702 -0.000264 -1 1.4142135623730951e-10
+0.001673 -0.000279 -1 1.4142135623730951e-10
+0.001650 -0.000302 -1 1.4142135623730951e-10
+0.001635 -0.000331 -1 1.4142135623730951e-10
+0.001630 -0.000364 -1 1.4142135623730951e-10
+0.001635 -0.000396 -1 1.4142135623730951e-10
+0.001650 -0.000426 -1 1.4142135623730951e-10
+0.001673 -0.000449 -1 1.4142135623730951e-10
+0.001702 -0.000464 -1 1.4142135623730951e-10
+0.001735 -0.000469 -1 1.4142135623730951e-10
+0.001767 -0.000464 -1 1.4142135623730951e-10
+0.001797 -0.000449 -1 1.4142135623730951e-10
+0.001820 -0.000426 -1 1.4142135623730951e-10
+0.001835 -0.000396 -1 1.4142135623730951e-10
+
+20 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 1 0 1 0 1 20 NAN
+20 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001840 -0.000364 1
+0.001835 -0.000331 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001835 -0.000331 1
+0.001820 -0.000302 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001820 -0.000302 1
+0.001797 -0.000279 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001797 -0.000279 1
+0.001767 -0.000264 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001767 -0.000264 1
+0.001735 -0.000259 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001735 -0.000259 1
+0.001702 -0.000264 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001702 -0.000264 1
+0.001673 -0.000279 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001673 -0.000279 1
+0.001650 -0.000302 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001650 -0.000302 1
+0.001635 -0.000331 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001635 -0.000331 1
+0.001630 -0.000364 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001630 -0.000364 1
+0.001635 -0.000396 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001635 -0.000396 1
+0.001650 -0.000426 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001650 -0.000426 1
+0.001673 -0.000449 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001673 -0.000449 1
+0.001702 -0.000464 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001702 -0.000464 1
+0.001735 -0.000469 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001735 -0.000469 1
+0.001767 -0.000464 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001767 -0.000464 1
+0.001797 -0.000449 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001797 -0.000449 1
+0.001820 -0.000426 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001820 -0.000426 1
+0.001835 -0.000396 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001835 -0.000396 1
+0.001840 -0.000364 1
+
+# Attributes
+0 # nof attributes
+
+# -------------- Object 26 Endo13 -------------- 
+
+0 0 1
+5 Geom2 # class
+2 # version
+2 # type
+1 # voidsLabeled
+1e-10 # gto1
+0.0001 # resTol
+21 # number of verticies
+# Verticies
+# X Y dom tol
+0.002294 -0.000258 -1 1.4142135623730951e-10
+0.002285 -0.000197 -1 1.4142135623730951e-10
+0.002257 -0.000143 -1 1.4142135623730951e-10
+0.002214 -0.000099 -1 1.4142135623730951e-10
+0.002159 -0.000071 -1 1.4142135623730951e-10
+0.002098 -0.000062 -1 1.4142135623730951e-10
+0.002038 -0.000071 -1 1.4142135623730951e-10
+0.001983 -0.000099 -1 1.4142135623730951e-10
+0.001940 -0.000143 -1 1.4142135623730951e-10
+0.001912 -0.000197 -1 1.4142135623730951e-10
+0.001902 -0.000258 -1 1.4142135623730951e-10
+0.001912 -0.000319 -1 1.4142135623730951e-10
+0.001940 -0.000373 -1 1.4142135623730951e-10
+0.001983 -0.000417 -1 1.4142135623730951e-10
+0.002038 -0.000444 -1 1.4142135623730951e-10
+0.002098 -0.000454 -1 1.4142135623730951e-10
+0.002159 -0.000444 -1 1.4142135623730951e-10
+0.002214 -0.000417 -1 1.4142135623730951e-10
+0.002257 -0.000373 -1 1.4142135623730951e-10
+0.002285 -0.000319 -1 1.4142135623730951e-10
+0.002294 -0.000258 -1 1.4142135623730951e-10
+
+21 # number of edges
+# Edges
+# vtx1 vtx2 s1 s2 up down mfd tol
+1 2 0 1 0 1 1 NAN
+2 3 0 1 0 1 2 NAN
+3 4 0 1 0 1 3 NAN
+4 5 0 1 0 1 4 NAN
+5 6 0 1 0 1 5 NAN
+6 7 0 1 0 1 6 NAN
+7 8 0 1 0 1 7 NAN
+8 9 0 1 0 1 8 NAN
+9 10 0 1 0 1 9 NAN
+10 11 0 1 0 1 10 NAN
+11 12 0 1 0 1 11 NAN
+12 13 0 1 0 1 12 NAN
+13 14 0 1 0 1 13 NAN
+14 15 0 1 0 1 14 NAN
+15 16 0 1 0 1 15 NAN
+16 17 0 1 0 1 16 NAN
+17 18 0 1 0 1 17 NAN
+18 19 0 1 0 1 18 NAN
+19 20 0 1 0 1 19 NAN
+20 21 0 1 0 1 20 NAN
+21 1 0 1 0 1 21 NAN
+21 # number of manifolds
+# Manifolds
+
+# Manifold #0
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002294 -0.000258 1
+0.002285 -0.000197 1
+
+# Manifold #1
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002285 -0.000197 1
+0.002257 -0.000143 1
+
+# Manifold #2
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002257 -0.000143 1
+0.002214 -0.000099 1
+
+# Manifold #3
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002214 -0.000099 1
+0.002159 -0.000071 1
+
+# Manifold #4
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002159 -0.000071 1
+0.002098 -0.000062 1
+
+# Manifold #5
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002098 -0.000062 1
+0.002038 -0.000071 1
+
+# Manifold #6
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002038 -0.000071 1
+0.001983 -0.000099 1
+
+# Manifold #7
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001983 -0.000099 1
+0.001940 -0.000143 1
+
+# Manifold #8
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001940 -0.000143 1
+0.001912 -0.000197 1
+
+# Manifold #9
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001912 -0.000197 1
+0.001902 -0.000258 1
+
+# Manifold #10
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001902 -0.000258 1
+0.001912 -0.000319 1
+
+# Manifold #11
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001912 -0.000319 1
+0.001940 -0.000373 1
+
+# Manifold #12
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001940 -0.000373 1
+0.001983 -0.000417 1
+
+# Manifold #13
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.001983 -0.000417 1
+0.002038 -0.000444 1
+
+# Manifold #14
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002038 -0.000444 1
+0.002098 -0.000454 1
+
+# Manifold #15
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002098 -0.000454 1
+0.002159 -0.000444 1
+
+# Manifold #16
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002159 -0.000444 1
+0.002214 -0.000417 1
+
+# Manifold #17
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002214 -0.000417 1
+0.002257 -0.000373 1
+
+# Manifold #18
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002257 -0.000373 1
+0.002285 -0.000319 1
+
+# Manifold #19
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002285 -0.000319 1
+0.002294 -0.000258 1
+
+# Manifold #20
+
+11 BezierCurve #class
+0 0 #version
+2 #sdim
+0 2 1 # transformation
+1 0 #degrees
+2 # number of control points
+#control point coords and weights
+0.002294 -0.000258 1
+0.002294 -0.000258 1
+
+# Attributes
+0 # nof attributes
+

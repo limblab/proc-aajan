@@ -1,0 +1,10 @@
+These thresholds and weights are the extended version
+
+Pulsewidths = [0.005,0.01,0.015,0.02, 0.05, 0.1, 0.2, 0.5, 1, 2];
+%Pulsewidths = [0.02, 0.05, 0.1, 0.2, 0.5, 1, 2] ; % matching old data
+
+% create a matrix of nodal voltages for evenly spaced set of amplitude and
+% d2ve data. Take into account d2ve cannot exceed 2*A -> divide by zero
+A_grid  = [0:25:1500]; % shift by 1 to avoid divide by zero
+d2Ve_grid = [0:5:1500];
+

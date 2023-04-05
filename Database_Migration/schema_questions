@@ -1,0 +1,30 @@
+
+1) The following fields are in the DAYS table and in the SESSIONS table:
+- num_reward
+- num_abort
+- num_fail
+- num_incomplete
+- behavior_notes
+- behavior_quality
+
+Should we keep these in the sessions table only? Is behavior quality by day the same as behavior quality by session?
+
+------------------------------------
+
+2) The following field exists in SESSIONS and THRESHOLD_FILES:
+- num_chans (THRESHOLD_FILES), numChannels (SESSIONS)
+
+Is there a reason to keep both?
+
+------------------------------------
+
+3) EMG_FILES, FORCE_FILES, and KIN_FILES all have the following structure:
+- filename (unique key)
+- file_id (primary)
+- sessions_key 
+- paper_key
+- rec_system (FORCE_FILES and EMG_FILES)
+- sampling_rate
+- table-specific fields - e.g. force_quality, emg_quality, kin_quality, force_notes, emg_notes, kin_notes, etc...
+
+Can we combine all these data into a single "files" table? are the filenames/fileids the same for each one?

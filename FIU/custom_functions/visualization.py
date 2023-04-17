@@ -189,10 +189,23 @@ def plot_losses_TempCNN(dataset, train_loader, test_loader, learning_rate, num_c
 
 def plot_losses_transfer_learning_TCN(dataset_dict, loader_dict, num_permutations, init_lr, lr_factor, num_epochs = 101):
     '''
-    Trains multiple TCNs in transfer learning. The core of the model (i.e. all of the convolutional layers) are trained in the following way:
-    A set of random permutations of dates is created. 
+    Trains multiple TCNs in transfer learning. The model is trained in the following way:
+    
+    A set of random permutations of dates and splits is created.
+    All permutations for the splits are flattened into a list - since I made 3 splits, this makes a list of 18 integers.
+    A subset of 18 permutations for dates is chosen.
+    The learning rate begins at init_lr for all layers, and then decreased for the core of the model (i.e. the convolutional layers) by a factor of lr_factor each time the split number changes.
+    The transfer layer is alwyas trained with an initial learning rate of init_lr.
 
-    The transfer layer is allowed to train with the initial learning rate in each iteration.
+    Below is an example of how the models are trained:
+        Split 0, Date Permutation 0 (e.g. '20210712', '20220309', '20210710', '20211105', '20210814'), transfer layer lr = 0.001, core initial learning rate = 0.001
+        Split 1, Date Permutation 1 (e.g. '20210710', '20211105', '20210814', '20210712', '20220309'), transfer layer lr = 0.001, core initial learning rate = 0.001*lr_factor
+        Split 2, Date Permutation 2 (e.g. '20210814', '20210712', '20220309', '20210710', '20211105'), transfer layer lr = 0.001, core initial learning rate = 0.001*(lr_factor^2)
+        Split 1, Date Permutation 3 (e.g. '20220309', '20210712', '20211105', '20210710', '20210814'), transfer layer lr = 0.001, core initial learning rate = 0.001*(lr_factor^3)
+        Split 2, Date Permutation 3 (e.g. '20211105', '20210710', '20210712', '20210814', '20220309'), transfer layer lr = 0.001, core initial learning rate = 0.001*(lr_factor^4)
+        Split 0, Date Permutation 3 (e.g. '20220309', '20211105', '20210814', '20210712', '20210710'), transfer layer lr = 0.001, core initial learning rate = 0.001*(lr_factor^5)
+        etc...
+    After 18 rounds, the final learning rate for the core layers is 0.001*(lr_factor^18). For lr_factor = 0.7, this equates to 1.6e-6.
 
     Args:
         dataset_dict (dict): a dictionary containing datasets that are split by electrode.
@@ -200,6 +213,9 @@ def plot_losses_transfer_learning_TCN(dataset_dict, loader_dict, num_permutation
         init_lr (float): the initial learning rate for the convolutional layers.
         lr_factor (float): the factor by which the initial learning rate is decayed every permutation.
         num_epochs (int): number of epochs each model is trained each permutation.
+
+    Returns:
+        A dictionary containing all the models for each date/split.
     '''
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 

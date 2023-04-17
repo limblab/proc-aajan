@@ -10,7 +10,7 @@ You can find the list of joint angles used in joint_angles_list.txt.
 
 You'll likely be interested in using OpenSIM joint angles, so the rest of the readme will focus on OpenSIM.
 
-## **Step 1: Conversion of raw OpenSIM data to XDS**
+## **Step 1: Conversion of raw OpenSIM data to XDS (in Matlab)**
 
 If you plan on using OpenSIM joint angles, you'll need to learn how to use Xuan's Data Structure, aka XDS. Link to the github: https://github.com/limblab/xds
 
@@ -31,8 +31,10 @@ Preprocessing can be broken down in the following steps:
 ## **Step 3: Creating and saving datasets and dataloaders**
 
 There are two dataset classes available: MLPDataset and TCNDataset.
+
 The MLPDataset class is used to make datasets for MLPs. Each instance in this dataset is a tuple containing input, output, and frame number. Each input/output pair corresponds to a single frame in the video.
 The TCNDataset class is used to make datasets for TCNs. Each instance in this dataset is a tuple containing input, output, and frame numbers. Each input/output pair corresponds to N frames in the video, where N can be specified in the class instantiation (default = 100). 
+
 You can create and save datasets with the create_and_save_datasets function in the data_loading.py script. This function has several inputs, most of which are used simply to make subfolders for different types dataset (e.g. fully restrained vs semirestrained, split by neuron vs non split). This code needs to be changed in order to save your datasets in the correct directories. Note that it automatically saves a train, test, and full version of the dataset. The full version of the dataset is saved for two main reasons: 
 1) important attributes regarding that dataset (e.g. date, target size, input type, etc.) are lost when making train/test subsets. The full version of the dataset is used in many other functions to keep track of these attributes. 
 2) While I never did this, the full dataset can be used to make other training/testing datasets for N-fold cross-validation. Note that the full version of the dataset does NOT retain the 20 second contiguous intervals mentioned above.

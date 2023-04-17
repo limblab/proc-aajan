@@ -1,4 +1,4 @@
-Below is a description of everything you need to know, from obtaining raw data to training models and making plots.
+Below is a description of everything you need to know, from obtaining raw data to training models and making plots. All functions pertaining to dataset creation, training/testing, and visualization can be found in the custom_functions folder in proc-aajan/FIU.
 
 ## **Step 0: Raw Data**
 

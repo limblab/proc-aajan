@@ -2,7 +2,16 @@ import torch
 from torch import nn
 
 class FCNet(torch.nn.Module):
-    def __init__(self, input_dim, output_dim, num_layers, hidden_layer_dim, add_relu = False):
+    '''
+    The MLP class.
+
+    Args: 
+        input_dim (int): number of landmarks/joints/velocities.
+        output_dim (int): number of electrodes.
+        hidden_layer_dim (int or list): Passing an integer will make each hidden layer the exact same dimensionality, passing a list allows you to make each hidden layer a different size.
+        add_relu (bool): this gives you the option to add a relu layer at the end of the network. Since we're predicting non-negative firing rates, default is set to True.
+    '''
+    def __init__(self, input_dim, output_dim, num_layers, hidden_layer_dim, add_relu = True):
         super(FCNet, self).__init__()
         self.name = 'Multi-Layer Perceptron'
         self.net = nn.ModuleList()
@@ -20,18 +29,24 @@ class FCNet(torch.nn.Module):
                 self.net.append(nn.ReLU())
             # output layer
             self.net.append(nn.Linear(hidden_layer_dim, output_dim))
-            if add_relu == True:
-                self.net.append(nn.ReLU())
         
         elif type(hidden_layer_dim == list):
             assert len(hidden_layer_dim) == num_layers-1
 
-            self.net.append(nn.Linear(input_dim, hidden_layer_dim[0]))
+            #input to first hidden layer
+            self.net.append(nn.Linear(input_dim, hidden_layer_dim[0])) 
             self.net.append(nn.ReLU())
+
+            #hidden layer to hidden layer
             for i in range(len(hidden_layer_dim)-1):
                 self.net.append(nn.Linear(hidden_layer_dim[i], hidden_layer_dim[i+1]))
                 self.net.append(nn.ReLU())
+
+            # final hidden layer to output
             self.net.append(nn.Linear(hidden_layer_dim[-1], output_dim))
+
+        if add_relu == True:
+            self.net.append(nn.ReLU())
     
     def forward(self, x):
         for layer in self.net:
@@ -40,7 +55,23 @@ class FCNet(torch.nn.Module):
 
 
 class TempConvNet(torch.nn.Module):
-    def __init__(self, input_dim, output_dim, num_conv_layers, num_readout_layers, kernel_size, filters_per_conv, add_relu = False, causal=False):
+    '''
+    The sequence-to-sequence TCN class. 
+    
+    Args:
+        input_dim (int): number of landmarks/joints/velocities.
+        output_dim (int): number of electrodes to predict.
+        num_readout_layers (int): should always be 1. I considered writing code to allow for more, but never got it to work.
+        kernel_size (int): length of the kernel in frames. In other functions, default is set to 5.
+        filters_per_conv (int): number of filters per convolutional layer. In other functions, default is set to 2. Note that increasing this value increases the size of the network exponentially.
+        add_relu (bool): this gives you the option to add a relu layer at the end of the network. Since we're predicting non-negative firing rates, default is set to True.
+        causal (bool): when True, this guarantees the convolutional layers do not violate causality. Padding is changed accordingly.
+
+    *** IMPORTANT ***   
+        Note the dimensionality of the input is FxN, where F is the number of features in the input and N is the number of instances. 
+        A transposition occurs before the final linear layer is applied to ensure the dimensionality of the output is NxD.
+    '''
+    def __init__(self, input_dim, output_dim, num_conv_layers, num_readout_layers, kernel_size, filters_per_conv, add_relu = True, causal=True):
         super(TempConvNet, self).__init__()
         self.name = "Temporal CNN"
         self.net = nn.ModuleList()

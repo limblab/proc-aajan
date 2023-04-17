@@ -1,21 +1,18 @@
 # basic stuff 
-from scipy import stats, signal, io
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import random
-import os
-import sklearn
-import math
-from sklearn.metrics import r2_score
 
-# torch stuff
-import torch
-from torch.utils.data import Dataset, DataLoader, Subset
-from torch import nn
-import torch.nn.functional as F
+def get_pr2(real_data, pred, EPS = 0.000001, return_electrodes = False):
+    '''
+    This function gets pr2 values.
 
-def get_pr2(real_data, pred, lam = 0, EPS = 0.000001, return_electrodes = False):
+    Args:
+        real_data (np.array): NxD array containing real targets. 
+        pred (np.array): NxD array containing real targets. 
+
+    Returns:
+        If return_electrodes = True, a Dx1 array containing the pR2 by electrode is returned.
+        If return_electrodes = False, the average of the above array is returned.
+    '''
     predictions = np.copy(pred)
     predictions[predictions==0]=EPS
     m = np.mean(real_data, axis = 0) #average for each neuron across all instances

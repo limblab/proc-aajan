@@ -21,7 +21,7 @@ The result of the XDS conversion will be a Matlab structure with the same name a
 ## **Step 2: Preprocessing XDS File (in Python)**
 
 Preprocessing can be broken down in the following steps:
-1) Data is read in with the xds lab_data module found in the xds_python folder.
+1) Data is read in with the xds lab_data module.
 2) The second and third joint angles must be converted from radians to degrees.
 3) Neural spikes, originally binned at 1000Hz during the XDS conversion, must be binned to match the joint angle data (30Hz) using the update_bin_data method. Spikes are then smoothed using the smooth_binned_spikes method using a gaussian filter of width (2 x bin_size) in accordance with standard practice. Resulting binned and smoothed spikes are converted to firing rates by dividing by bin_size.
 4) Oftentimes, the binned firing rates array will be longer than the joint angles. The end of the neural array must be trimmed in order to match the length of the joint angle data.
@@ -36,7 +36,7 @@ The MLPDataset class is used to make datasets for MLPs. Each instance in this da
 The TCNDataset class is used to make datasets for TCNs. Each instance in this dataset is a tuple containing input, output, and frame numbers. Each input/output pair corresponds to N frames in the video, where N can be specified in the class instantiation (default = 100). 
 
 You can create and save datasets with the create_and_save_datasets function in the data_loading.py script. This function has several inputs, most of which are used simply to make subfolders for different types dataset (e.g. fully restrained vs semirestrained, split by neuron vs non split). This code needs to be changed in order to save your datasets in the correct directories. Note that it automatically saves a train, test, and full version of the dataset. The full version of the dataset is saved for two main reasons: 
-1) Important attributes regarding that dataset (e.g. date, target size, input type, etc.) are lost when making train/test subsets. The full version of the dataset is used in many other functions to keep track of these attributes. 
+1) important attributes regarding that dataset (e.g. date, target size, input type, etc.) are lost when making train/test subsets. The full version of the dataset is used in many other functions to keep track of these attributes. 
 2) While I never did this, the full dataset can be used to make other training/testing datasets for N-fold cross-validation. Note that the full version of the dataset does NOT retain the 20 second contiguous intervals mentioned above.
 Once the datasets are saved in the appropriate location, you can load all your datasets into a single dictionary using load_datasets. You can then convert those into dataloaders using get_loaders.
 
@@ -47,6 +47,7 @@ plot_losses_MLP (used for MLPs)
 plot_losses_TempCNN (used for TCNs)
 
 and can be found in visualization.py. As mentioned above, since the input-output pairs in the TCN dataset are of length N frames, the TCN is a sequence-to-sequence network.
+
 
 ## **Step 5: Visualizations and making plots**
 

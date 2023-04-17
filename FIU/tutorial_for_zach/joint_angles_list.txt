@@ -1,7 +1,7 @@
 The OpenSIM model produces 24 joint angles, listed below:
 
 - la_wr_sup_pro (wrist supenation/pronation)
-- la_wr_rd_ud (not sure what this one is called - will fill in soon)
+- la_wr_rd_ud (wrist radial deviation/ulnar deviation)
 - la_wr_e_f (wrist extension/flexion)
 - la_cmc1_f_e (thumb CMC joint extension/flexion)
 - la_cmc1_opp (thumb CMC joint opposition)
@@ -25,7 +25,7 @@ The OpenSIM model produces 24 joint angles, listed below:
 - la_pip5_e_f (pinky MCP joint extension/flexion)
 - la_dip5_e_f (pinky DIP joint extension/flexion)
 
-My joint angle calculation produces 15 joint angles, listed below:
+My joint angle calculation produces 15 joint angles, listed below. Since they are effectively treated as hinges, they are all extension/flexion:
 
 - pinky_d_angle (pinky DIP joint)
 - pinky_m_angle (pinky MCP joint)

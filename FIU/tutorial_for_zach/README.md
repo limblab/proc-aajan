@@ -7,48 +7,48 @@ Neural data is stored in .nev files. Joint angle data can be retrieved in two wa
 
 The OpenSIM model produces 24 joint angles, listed below:
 
-la_wr_sup_pro (wrist supenation/pronation)
-la_wr_rd_ud (not sure what this one is called - will fill in soon)
-la_wr_e_f (wrist extension/flexion)
-la_cmc1_f_e (thumb CMC joint extension/flexion)
-la_cmc1_opp (thumb CMC joint opposition)
-la_cmc1_ad_ab (thumb CMC joint adduction/abduction)
-la_mcp1_e_f (thumb MCP joint extension/flexion)
-la_ip1_e_f (thumb IP joint extension/flexion)
-la_mcp2_e_f (index MCP joint extension/flexion)
-la_mcp2_ad_ab (index MCP joint adduction/abduction)
-la_pip2_e_f (index MCP joint extension/flexion)
-la_dip2_e_f (index DIP joint extension/flexion)
-la_mcp3_e_f (middle MCP joint extension/flexion)
-la_mcp3_rd_ud (middle MCP joint adduction/abduction)
-la_pip3_e_f (middle MCP joint extension/flexion)
-la_dip3_e_f (middle DIP joint extension/flexion)
-la_mcp4_e_f (ring MCP joint extension/flexion)
-la_mcp4_ad_ab (ring MCP joint adduction/abduction)
-la_pip4_e_f (ring MCP joint extension/flexion)
-la_dip4_e_f (ring DIP joint extension/flexion)
-la_mcp5_e_f (pinky MCP joint extension/flexion)
-la_mcp5_ad_ab (pinky MCP joint adduction/abduction)
-la_pip5_e_f (pinky MCP joint extension/flexion)
-la_dip5_e_f (pinky DIP joint extension/flexion)
+- la_wr_sup_pro (wrist supenation/pronation)
+- la_wr_rd_ud (not sure what this one is called - will fill in soon)
+- la_wr_e_f (wrist extension/flexion)
+- la_cmc1_f_e (thumb CMC joint extension/flexion)
+- la_cmc1_opp (thumb CMC joint opposition)
+- la_cmc1_ad_ab (thumb CMC joint adduction/abduction)
+- la_mcp1_e_f (thumb MCP joint extension/flexion)
+- la_ip1_e_f (thumb IP joint extension/flexion)
+- la_mcp2_e_f (index MCP joint extension/flexion)
+- la_mcp2_ad_ab (index MCP joint adduction/abduction)
+- la_pip2_e_f (index MCP joint extension/flexion)
+- la_dip2_e_f (index DIP joint extension/flexion)
+- la_mcp3_e_f (middle MCP joint extension/flexion)
+- la_mcp3_rd_ud (middle MCP joint adduction/abduction)
+- la_pip3_e_f (middle MCP joint extension/flexion)
+- la_dip3_e_f (middle DIP joint extension/flexion)
+- la_mcp4_e_f (ring MCP joint extension/flexion)
+- la_mcp4_ad_ab (ring MCP joint adduction/abduction)
+- la_pip4_e_f (ring MCP joint extension/flexion)
+- la_dip4_e_f (ring DIP joint extension/flexion)
+- la_mcp5_e_f (pinky MCP joint extension/flexion)
+- la_mcp5_ad_ab (pinky MCP joint adduction/abduction)
+- la_pip5_e_f (pinky MCP joint extension/flexion)
+- la_dip5_e_f (pinky DIP joint extension/flexion)
 
 My joint angle calculation produces 15 joint angles, listed below:
 
-pinky_d_angle (pinky DIP joint)
-pinky_m_angle (pinky MCP joint)
-pinky_p_angle (pinky PIP joint)
-ring_d_angle (ring DIP joint)
-ring_m_angle (ring MCP joint)
-ring_p_angle (ring PIP joint)
-middle_d_angle (middle DIP joint)
-middle_m_angle (middle MCP joint)
-middle_p_angle (middle PIP joint)
-index_d_angle (index DIP joint)
-index_m_angle (index MCP joint)
-index_p_angle (index PIP joint)
-thumb_d_angle (thumb DIP joint)
-thumb_m_angle (thumb MCP joint)
-thumb_p_angle (thumb PIP joint)
+- pinky_d_angle (pinky DIP joint)
+- pinky_m_angle (pinky MCP joint)
+- pinky_p_angle (pinky PIP joint)
+- ring_d_angle (ring DIP joint)
+- ring_m_angle (ring MCP joint)
+- ring_p_angle (ring PIP joint)
+- middle_d_angle (middle DIP joint)
+- middle_m_angle (middle MCP joint)
+- middle_p_angle (middle PIP joint)
+- index_d_angle (index DIP joint)
+- index_m_angle (index MCP joint)
+- index_p_angle (index PIP joint)
+- thumb_d_angle (thumb DIP joint)
+- thumb_m_angle (thumb MCP joint)
+- thumb_p_angle (thumb PIP joint)
 
 You'll likely be interested in OpenSIM joint angles, so the rest of the readme will focus on OpenSIM.
 
@@ -72,7 +72,9 @@ Step 3: Creating and saving datasets and dataloaders
 There are two dataset classes available: MLPDataset and TCNDataset.
 The MLPDataset class is used to make datasets for MLPs. Each instance in this dataset is a tuple containing input, output, and frame number. Each input/output pair corresponds to a single frame in the video.
 The TCNDataset class is used to make datasets for TCNs. Each instance in this dataset is a tuple containing input, output, and frame numbers. Each input/output pair corresponds to N frames in the video, where N can be specified in the class instantiation (default = 100). 
-You can create and save datasets with the create_and_save_datasets function in the data_loading.py script. This function has several inputs, most of which are used simply to make subfolders for different types dataset (e.g. fully restrained vs semirestrained, split by neuron vs non split). This code needs to be changed in order to save your datasets in the correct directories. Note that it automatically saves a train, test, and full version of the dataset. The full version of the dataset is saved for two main reasons: 1) important attributes regarding that dataset (e.g. date, target size, input type, etc.) are lost when making train/test subsets. The full version of the dataset is used in many other functions to keep track of these attributes. 2) While I never did this, the full dataset can be used to make other training/testing datasets for N-fold cross-validation. Note that the full version of the dataset does NOT retain the 20 second contiguous intervals mentioned above.
+You can create and save datasets with the create_and_save_datasets function in the data_loading.py script. This function has several inputs, most of which are used simply to make subfolders for different types dataset (e.g. fully restrained vs semirestrained, split by neuron vs non split). This code needs to be changed in order to save your datasets in the correct directories. Note that it automatically saves a train, test, and full version of the dataset. The full version of the dataset is saved for two main reasons: 
+1) important attributes regarding that dataset (e.g. date, target size, input type, etc.) are lost when making train/test subsets. The full version of the dataset is used in many other functions to keep track of these attributes. 
+2) While I never did this, the full dataset can be used to make other training/testing datasets for N-fold cross-validation. Note that the full version of the dataset does NOT retain the 20 second contiguous intervals mentioned above.
 Once the datasets are saved in the appropriate location, you can load all your datasets into a single dictionary using load_datasets. You can then convert those into dataloaders using get_loaders.
 
 Step 4: Training models

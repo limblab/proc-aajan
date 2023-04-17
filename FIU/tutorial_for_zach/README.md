@@ -1,6 +1,6 @@
 Below is a description of everything you need to know, from obtaining raw data to training models and making plots.
 
-**Raw Data**
+## **Step 0: Raw Data**
 
 Neural data is stored in .nev files. Joint angle data can be retrieved in two ways:
 1) OpenSIM. This fancy software calculates joint angles with its internal model of the arm.
@@ -10,7 +10,7 @@ You can find the list of joint angles used in joint_angles_list.txt.
 
 You'll likely be interested in using OpenSIM joint angles, so the rest of the readme will focus on OpenSIM.
 
-**Step 1: Conversion of raw data to XDS**
+## **Step 1: Conversion of raw OpenSIM data to XDS**
 
 If you plan on using OpenSIM joint angles, you'll need to learn how to use Xuan's Data Structure, aka XDS. Link to the github: https://github.com/limblab/xds
 
@@ -18,7 +18,7 @@ In order to make the .mat file with joint angle and neural data, 2 files are nee
 
 The result of the XDS conversion will be a Matlab structure with the same name as the raw data files.
 
-**Step 2: Preprocessing XDS File (in Python)**
+## **Step 2: Preprocessing XDS File (in Python)**
 
 Preprocessing can be broken down in the following steps:
 1) Data is read in with the xds lab_data module.
@@ -28,7 +28,7 @@ Preprocessing can be broken down in the following steps:
 5) For plotting purposes, I manually examined the videos to find a continguous 20 second interval where the monkey is doing something interesting. The reason I do this is because I shuffle the datasets before saving them and randomly assign instances to training and testing sets. Doing this allows me to separate contiguous segments of data that can be tested on and visualized - namely to compare true target behavior vs predictions. I store those ranges and results in dictionaries called "good_frates_dict", "good_inputs_dict", and "good_frates_range_dict". In order to make datasets in the next step, store each of the joint angles in dictionaries so they can easily be accessed by each of the dataset classes.
 6) (optional) To artificially create more datasets, I also randomly split the datasets by elecrode and store them in dictionaries.
 
-**Step 3: Creating and saving datasets and dataloaders**
+## **Step 3: Creating and saving datasets and dataloaders**
 
 There are two dataset classes available: MLPDataset and TCNDataset.
 The MLPDataset class is used to make datasets for MLPs. Each instance in this dataset is a tuple containing input, output, and frame number. Each input/output pair corresponds to a single frame in the video.
@@ -38,7 +38,7 @@ You can create and save datasets with the create_and_save_datasets function in t
 2) While I never did this, the full dataset can be used to make other training/testing datasets for N-fold cross-validation. Note that the full version of the dataset does NOT retain the 20 second contiguous intervals mentioned above.
 Once the datasets are saved in the appropriate location, you can load all your datasets into a single dictionary using load_datasets. You can then convert those into dataloaders using get_loaders.
 
-**Step 4: Training models**
+## **Step 4: Training models**
 The two primary functions used to train and save models are:
 
 plot_losses_MLP (used for MLPs)
@@ -47,7 +47,7 @@ plot_losses_TempCNN (used for TCNs)
 and can be found in visualization.py. As mentioned above, since the input-output pairs in the TCN dataset are of length N frames, the TCN is a sequence-to-sequence network.
 
 
-**Step 5: Visualizations and making plots**
+## **Step 5: Visualizations and making plots**
 
 I've created a variety of functions to visualize the performances of the models as well as their predictions. The most important ones, which I've used in the tutorial notebook are: 
 
@@ -59,6 +59,6 @@ I've created a variety of functions to visualize the performances of the models 
 
 Descriptions of each of these can be found in the visualization.py module, and an example of how to use each of these is in the tutorial notebook.
 
-**Side notes: transfer learning**
+## **Side notes: transfer learning**
 
 I never used a single main function to perform transfer learning - I felt like there were too many bells and whistles to for a single function to be useful. However, I've created an example of a transfer learning function for a TCN that can be used on a set of datasets that have been split by neuron that can be seen in the tutorial notebook.

@@ -43,8 +43,8 @@ Once the datasets are saved in the appropriate location, you can load all your d
 ## **Step 4: Training models**
 The two primary functions used to train and save models are:
 
-plot_losses_MLP (used for MLPs)
-plot_losses_TempCNN (used for TCNs)
+- plot_losses_MLP (used for MLPs)
+- plot_losses_TempCNN (used for TCNs)
 
 and can be found in visualization.py. As mentioned above, since the input-output pairs in the TCN dataset are of length N frames, the TCN is a sequence-to-sequence network.
 

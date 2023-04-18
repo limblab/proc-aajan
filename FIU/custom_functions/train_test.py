@@ -22,7 +22,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 class RBFKernel(nn.Module):
     def __init__(self, sigma):
-        super(RBFKernel, self).__init__()
+        super().__init__()
         self.sigma = sigma
 
     def forward(self, X, Y):
@@ -41,11 +41,19 @@ class RBFKernel(nn.Module):
         Y2 = torch.sum(Y**2, dim=2).view(N, -1, 1)
         XY = torch.matmul(X, torch.transpose(Y, 1, 2))
         dist = X2 + Y2 - 2*XY
-        return torch.exp(-dist/(2*self.sigma**2))
+        ans = torch.exp(-dist/(2*self.sigma**2))
+
+        print(X2[torch.isnan(X2)].shape, 
+            Y2[torch.isnan(Y2)].shape, 
+            XY[torch.isnan(XY)].shape, 
+            dist[torch.isnan(dist)].shape, 
+            ans[torch.isnan(ans)].shape)
+
+        return(ans)
 
 class MMDLoss(nn.Module):
     def __init__(self, sigma):
-        super(MMDLoss, self).__init__()
+        super().__init__()
         self.sigma = sigma
         self.rbf_kernel = RBFKernel(sigma)
 

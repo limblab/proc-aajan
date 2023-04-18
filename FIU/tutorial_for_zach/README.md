@@ -14,7 +14,7 @@ You'll likely be interested in using OpenSIM joint angles, so the rest of the re
 
 If you plan on using OpenSIM joint angles, you'll need to learn how to use Xuan's Data Structure, aka XDS. Link to the github: https://github.com/limblab/xds
 
-In order to make the .mat file with joint angle and neural data, 2 files are needed: a .nev file and a .mot file. The .nev file contains neural spike events; the .mot file is the output of the OpenSIM model containing joint angles. They must be placed in a folder and must have the exact same name (minues the extension) in order for the XDS conversion to work. Running those through XDS code will give you a .mat structure with joint angles and neural events. I needed to make some changes in order for the code to work for me, so I will upload my version of Xuan's XDS code to my github folder. 
+In order to make the .mat file with joint angle and neural data, 3 files are needed: a .nev file, a .nsx file, and a .mot file. The .nev file contains neural spike events; the .mot file is the output of the OpenSIM model containing joint angles. They must be placed in a folder and must have the exact same name (minues the extension) in order for the XDS conversion to work. Running those through XDS code will give you a .mat structure with joint angles and neural events. I needed to make some changes in order for the code to work for me, so I will upload my version of Xuan's XDS code to my github folder. 
 
 The result of the XDS conversion will be a Matlab structure with the same name as the raw data files.
 

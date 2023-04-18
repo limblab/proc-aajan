@@ -271,7 +271,7 @@ setattr(__main__, "TCNDataset", TCNDataset)
 setattr(__main__, "OSIMDataset", OSIMDataset)
 setattr(__main__, "CustomDataset", CustomDataset)
 
-def create_and_save_datasets(dataset, tcnn = False, instance_length = 100, split_neurons = False, split_num = 0, restraint_type = 'fullyrestrained'):
+def create_and_save_datasets(dataset, good_range, tcnn = False, instance_length = 100, split_neurons = False, split_num = 0, restraint_type = 'fullyrestrained'):
     num_instances = len(dataset)
     train_split = int(num_instances*0.8)
 
@@ -294,6 +294,7 @@ def create_and_save_datasets(dataset, tcnn = False, instance_length = 100, split
         torch.save(dataset, os.path.join(full_dir,'Full.pt'))
         torch.save(osim_train_dataset, os.path.join(full_dir,'Train.pt'))
         torch.save(osim_test_dataset, os.path.join(full_dir,'Test.pt'))
+        torch.save(good_range, os.path.join(full_dir,'GoodRange.pt'))
 
 def load_datasets(base_dir, split_neurons = False):
     dataset_dict = {}

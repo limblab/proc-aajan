@@ -34,11 +34,10 @@ def plot_losses_MLP(dataset, train_loader, test_loader, learning_rate, num_layer
     Trains a MLP, plots the train and test loss curves, and saves the model in the directory specified.
     
     Args:
-        dataset: specified in ... several attributes from this object are needed to make the code run:
-            input_dim, output_dim, inp_type, split_num, and date. 
-        train_loader: specified in ...
-        test_loader: 
-        learning_rate (int): the initial learning rate 
+        dataset (torch.utils.data.Dataset): full dataset corresponding to the train and test dataloaders.
+        train_loader (torch.utils.data.DataLoader): training data used to train model.
+        test_loader (torch.utils.data.DataLoader): testing data used to test model.
+        learning_rate (float): the initial learning rate 
         num_layers (int): the number of fully connected layers in the model 
         add_relu (bool): this gives you the option of adding a relu layer at the end. The default is True since we're trying to predict non-negative firing rates.
         save (bool): when True, the model is saved in the specified directory.
@@ -95,12 +94,14 @@ def plot_losses_MLP(dataset, train_loader, test_loader, learning_rate, num_layer
     plt.show()
 
 
-    directory = '/content/drive/My Drive/Miller_Lab/FIU/MLP/Pop_FR_OpenSIM/{}/{}/{}/{}/'.format(split,loss_type,restraint_type,dataset.date)
+    directory = '/content/drive/My Drive/Miller_Lab/FIU/MLP/Pop_FR_OpenSIM/{}/{}/{}/{}/'.format(split,restraint_type,loss_type,dataset.date)
     if split == 'NonSplit':
         model_name = 'MLP_{}_{}_{}_layers_reluadded'.format(dataset.date,dataset.input_type,model.num_layers)
     elif split == 'SplitNeurons':
         model_name = '{}/MLP_{}_{}_layers'.format(dataset.split_num,dataset.input_type,model.num_layers)
     if save == True:
+        if os.path.exists(directory) == False:
+            os.makedirs(directory)
         torch.save(model.state_dict(), directory+model_name)
 
     return(model)
@@ -110,10 +111,9 @@ def plot_losses_TempCNN(dataset, train_loader, test_loader, learning_rate, num_c
     Trains a TCN, plots the train and test loss curves, and saves the model in the directory specified.
     
     Args:
-        Dataset: specified in ... several attributes from this object are needed to make the code run:
-            input_dim, output_dim, inp_type, split_num, and date. 
-        train_loader: training data used to train model.
-        test_loader: testing data used to test model.
+        dataset (torch.utils.data.Dataset): full dataset corresponding to the train and test dataloaders.
+        train_loader (torch.utils.data.DataLoader): training data used to train model.
+        test_loader (torch.utils.data.DataLoader): testing data used to test model.
         learning_rate (float): the initial learning rate
         num_conv_layers (int): the number of convolutional connected layers in the model
         kernel_size (int): length of the kernel
@@ -176,13 +176,15 @@ def plot_losses_TempCNN(dataset, train_loader, test_loader, learning_rate, num_c
     plt.show()
 
 
-    directory = '/content/drive/My Drive/Miller_Lab/FIU/Temporal_CNN/Pop_FR_OpenSIM/{}/{}/instance_length_{}/{}/{}/{}/'.format(training_type,split,instance_length,loss_type,restraint_type,dataset.date)
+    directory = '/content/drive/My Drive/Miller_Lab/FIU/Temporal_CNN/Pop_FR_OpenSIM/{}/{}/instance_length_{}/{}/{}/{}/'.format(training_type,split,instance_length,restraint_type,loss_type,dataset.date)
     if split == 'NonSplit':
         model_name = 'TempCNN_{}_{}_{}_convlayers_reluadded'.format(dataset.date,dataset.input_type,model.num_conv_layers)
     elif split == 'SplitNeurons':
         model_name = '{}/TempCNN_{}_{}_convlayers_reluadded'.format(dataset.split_num,dataset.input_type,model.num_conv_layers)
     print(directory+model_name)
     if save == True:
+        if os.path.exists(directory) == False:
+            os.makedirs(directory)
         torch.save(model.state_dict(), directory+model_name)
 
     return(model)
@@ -321,9 +323,9 @@ def plot_and_compare_ks(model_1_name, model1, dataset1, test_loader1, conv1, mod
 
     Args:
         model_1_name, model_2_name (str): names of the trained models being compared (e.g. 'MLP', 'TCN')
-        model1, model2: trained models whose pR^2 values being compared. 
-        dataset1, dataset2: full datasets corresponding to the test_loaders.
-        test_loader_1, test_loader_2: dataloaders with the test sets of interest.
+        model1, model2 (FCNet or TempConvNet): trained models whose pR^2 values being compared. 
+        dataset1, dataset2 (torch.utils.data.Dataset): full datasets corresponding to the test_loaders.
+        test_loader_1, test_loader_2 (torch.utils.data.DataLoader): dataloaders with the test sets of interest.
         conv1, conv2 (bools): True for TempCNN, False for MLP.
         restraint_type (str): fullyrestrained or semirestrained.
         bins (int): number of bins for histogram.
@@ -422,8 +424,9 @@ def plot_compare_electrodes_subset(mlp_model, mlp_dataset, mlp_test_loader, tcn_
 
 
     Args:
-        mlp_model, tcn_model: Trained MLP and TCN models used to generate predictions.
-        mlp_dataset
+        mlp_model, tcn_model (FCNet, TempConvNet): Trained MLP and TCN models used to generate predictions.
+        mlp_dataset, tcn_dataset (torch.utils.data.Dataset): full datasets corresponding to test loaders.
+        mlp_test_loader, tcn_test_loader (torch.utils.data.DataLoader): test loaders containing data for their respective models.
         electrode_subset (list): list of electrode indices to be plotted.
         rng (tuple): contains the upper and lower bounds of the range in time you'd like to plot for each electrode.
     '''
@@ -472,7 +475,7 @@ def plot_targets_and_preds_agnostic(model, good_inp, good_out, electrodes_list, 
     Plots the predictions and targets for 
 
     Args:
-        model: trained model used to generate predictions.
+        model (FCNet or TempConvNet): trained model used to generate predictions.
         good_inp (np.array): an array containing . 
             ***Note: I typically utilize the array parsed out of the dataset at the beginning where the monkey is doing something interesting.
         conv (bool): True for TempCNN, False for MLP.

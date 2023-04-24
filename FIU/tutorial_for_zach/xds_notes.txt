@@ -1,0 +1,31 @@
+## This will stay constant for each file you convert.
+
+params.monkey_name = 'Pop';
+params.array_name = 'M1';
+params.task_name = 'FR';
+params.ran_by = 'KLB';
+params.lab = 1;
+params.bin_width = 0.001;
+params.sorted = 1;
+params.requires_raw_emg = 0;
+params.save_waveforms = 0;
+map_dir = 'Z:\limblab\User_folders\Aajan\';
+map_name = 'SN 6250-002339.cmp';
+
+
+################################################
+
+## This will change with every file.
+
+file_dir = 'Z:\limblab\User_folders\Aajan\neural_data_for_FIU\withmot\fullyrestrained\20210928\';
+file_name = '20210928_Pop_FR_001';
+xds = raw_to_xds(file_dir, file_name, map_dir, map_name, params);
+matfile_dir = strcat(file_dir, file_name, '.mat');
+save(matfile_dir, 'xds','-v7.3');
+
+################################################
+
+THINGS TO REMEMBER:
+Put ClassyDataAnalysis in your path. 
+Make sure there's a "\" at the end of file_dir, otherwise it'll say it can't find the directory.
+Always add the '-v7.3' argument to save, otherwise you'll have loading issues in python.

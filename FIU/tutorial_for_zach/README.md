@@ -14,9 +14,9 @@ You'll likely be interested in using OpenSIM joint angles, so the rest of the re
 
 If you plan on using OpenSIM joint angles, you'll need to learn how to use Xuan's Data Structure, aka XDS. Link to the github: https://github.com/limblab/xds
 
-In order to make the .mat file with joint angle and neural data, 3 files are needed: a .nev file, a .nsx file, and a .mot file. The .nev file contains neural spike events; the .mot file is the output of the OpenSIM model containing joint angles. They must be placed in a folder and must have the exact same name (minues the extension) in order for the XDS conversion to work. Running those through XDS code will give you a .mat structure with joint angles and neural events. I needed to make some changes in order for the code to work for me, so I will upload my version of Xuan's XDS code to my github folder. 
+In order to make the .mat file with joint angle and neural data, 3 files are needed: a .nev file, a .nsx file, and a .mot file. The .nev file contains neural spike events; the .mot file is the output of the OpenSIM model containing joint angles. They must be placed in a folder and must have the exact same name (minus the extension) in order for the XDS conversion to work. A screenshot with an example folder called "example_folder_xds" is available (note the .mat will show up after the conversion is done). 
 
-The result of the XDS conversion will be a Matlab structure with the same name as the raw data files.
+The function you'll use to run the conversion is raw_to_xds.m in xds_matlab. I've added a file called xds_notes.txt with each of the arguments necessary to run this function. Running raw_to_xds.m will produce a structure containing neural events in the spike_counts field and kinematic data in the joint_angles field. This structure will have the same name as the raw data files. When saving the structure, ensure you add '-v7.3' as an argument - this will save it in a format readable to h5py.
 
 ## **Step 2: Preprocessing XDS File (in Python)**
 
@@ -30,7 +30,8 @@ Preprocessing can be broken down in the following steps:
 
 ## **Step 3: Creating and saving datasets and dataloaders**
 
-There are two dataset classes available: MLPDataset and TCNDataset.
+There are two dataset classes available: MLPDataset and TCNDataset. Those can be found in data_loading.py.
+**Note**: I initally made really silly names for those classes and called them "OSIMDataset" and "CustomDataset". Several datasets are saved as instances of classes, and the corresponding code is necessary to load those datasets; therefore, I've left that code in data_loading.py. However, you can ignore this entirely.
 
 The MLPDataset class is used to make datasets for MLPs. Each instance in this dataset is a tuple containing input, output, and frame number. Each input/output pair corresponds to a single frame in the video.
 The TCNDataset class is used to make datasets for TCNs. Each instance in this dataset is a tuple containing input, output, and frame numbers. Each input/output pair corresponds to N frames in the video, where N can be specified in the class instantiation (default = 100). 

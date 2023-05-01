@@ -134,7 +134,8 @@ class TCNDataset(Dataset):
     def __getitem__(self, idx):
         input = torch.from_numpy(self.inputs[idx])
         neuraloutput = torch.from_numpy(self.neuraloutputs[idx])
-        return input.float().t(), neuraloutput.float(), self.sample_nums #input is transposed for convenience - better for Conv1D
+        sample_num = self.sample_nums[idx]
+        return input.float().t(), neuraloutput.float(), sample_num #input is transposed for convenience - better for Conv1D
 
 class OSIMDataset(Dataset):
     '''

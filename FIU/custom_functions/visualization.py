@@ -12,6 +12,7 @@ import seaborn as sn
 import time
 from scipy.stats import ks_2samp
 import itertools
+from sklearn.decomposition import PCA
 
 # torch stuff
 import torch
@@ -316,7 +317,7 @@ def plot_losses_transfer_learning_TCN(dataset_dict, loader_dict, num_permutation
 
     return(models)
 
-def plot_and_compare_ks(model_1_name, model1, dataset1, test_loader1, conv1, model_2_name, model2, dataset2, test_loader2, conv2, restraint_type, bins = 20, split = False):
+def plot_and_compare_ks(model_1_name, model1, dataset1, test_loader1, conv1, model_2_name, model2, dataset2, test_loader2, conv2, restraint_type, exclude_bad_neurons = False, bins = 20, split = False):
     '''
     Plots a two histograms of the Kolomogrov-Smirnov statistic for each electrode - one histogram for each trained model. 
     Orange and blue vertical lines correspond to the mean of each distribution.
@@ -338,12 +339,20 @@ def plot_and_compare_ks(model_1_name, model1, dataset1, test_loader1, conv1, mod
 
     ks_elect_1 = []
     ks_elect_2 = []
+    pr2_by_neuron_model1 = r2_pr2.get_all_pr2(model1, dataset1, test_loader1, conv = conv1)
+    pr2_by_neuron_model2 = r2_pr2.get_all_pr2(model2, dataset2, test_loader2, conv = conv2)
 
     for k in range(test_targets_1.shape[1]):
         ks_1 = ks_2samp(test_targets_1[:,k], test_preds_1[:,k]).statistic
         ks_2 = ks_2samp(test_targets_2[:,k], test_preds_2[:,k]).statistic
         ks_elect_1.append(ks_1)
         ks_elect_2.append(ks_2)
+
+    ks_elect_1 = np.array(ks_elect_1)
+    ks_elect_2 = np.array(ks_elect_2)
+
+    if exclude_bad_neurons == True:
+        ks_elect_1, ks_elect_2 = ks_elect_1[pr2_by_neuron_model2>0], ks_elect_2[pr2_by_neuron_model2>0]
 
     test_target_dist = np.histogram(ks_elect_1, bins=bins)
     plt.hist(ks_elect_1, bins = bins, alpha = 0.4, label = model_1_name)
@@ -360,7 +369,7 @@ def plot_and_compare_ks(model_1_name, model1, dataset1, test_loader1, conv1, mod
     plt.show()
     return(np.mean(ks_elect_1),np.mean(ks_elect_2))
 
-def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model_2_name, model2, dataset2, test_loader2, conv2, restraint_type, exclude_bad_neurons = False, max_dom = 101, split = False):
+def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model_2_name, model2, dataset2, test_loader2, conv2, restraint_type, exclude_bad_neurons = False, frac = 0.5, max_dom = 101, split = False):
     '''
     Plots a scatterplot of the pR^2 values of two models. This is one of my most often-used functions for comparing models.
     Values on the x-axis correspond to model1, values on the y-axis correspond to model2.
@@ -380,11 +389,11 @@ def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model
     pr2_by_neuron_model1 = r2_pr2.get_all_pr2(model1, dataset1, test_loader1, conv = conv1)
     pr2_by_neuron_model2 = r2_pr2.get_all_pr2(model2, dataset2, test_loader2, conv = conv2)
 
-    print('{} average pR2: {}'.format(model_1_name, np.mean(pr2_by_neuron_model1)))
-    print('{} average pR2: {}'.format(model_2_name, np.mean(pr2_by_neuron_model2)))
-
     dataset_array_output = data_loading.convert_osim_dataset_to_array(dataset2)
     dom = depth_of_modulation(dataset_array_output[1])
+    sorted_indices = np.argsort(dom)[::-1]
+    num_inds = int(len(dom)*frac)
+    top_indices = sorted_indices[:num_inds]
 
     if exclude_bad_neurons == False:
         dom = np.append(dom, np.array([0,max_dom]))
@@ -393,11 +402,15 @@ def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model
         pr2_model2_copy = np.append(pr2_model2_copy, np.array([0.5,0.5]))
     else: 
         pr2_model1_copy, pr2_model2_copy = np.copy(pr2_by_neuron_model1), np.copy(pr2_by_neuron_model2)
-        dom = dom[pr2_model2_copy>0]
+        dom = dom[top_indices]
         dom = np.append(dom, np.array([0,max_dom]))
-        pr2_model1_copy, pr2_model2_copy = pr2_model1_copy[pr2_model2_copy>0], pr2_model2_copy[pr2_model2_copy>0]
-        pr2_model1_copy = np.append(pr2_model1_copy, np.array([0.001,0.001]))
-        pr2_model2_copy = np.append(pr2_model2_copy, np.array([0.5,0.5]))
+        pr2_model1_copy, pr2_model2_copy = pr2_model1_copy[top_indices], pr2_model2_copy[top_indices]
+        pr2_model1_copy = np.append(pr2_model1_copy, np.array([-1,-1]))
+        pr2_model2_copy = np.append(pr2_model2_copy, np.array([-1,-1]))
+
+    print('{} average pR2: {}'.format(model_1_name, np.mean(pr2_model1_copy)))
+    print('{} average pR2: {}'.format(model_2_name, np.mean(pr2_model2_copy)))
+
     plt.scatter(pr2_model2_copy,pr2_model1_copy,c=dom, cmap=plt.cm.viridis)
     plt.xlabel('{} PR2'.format(model_2_name))
     plt.ylabel('{} PR2'.format(model_1_name))
@@ -414,33 +427,86 @@ def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model
     else:
         plt.xlim([-0.1, mx+0.15])
         plt.ylim([-0.1, mx+0.15])
-        plt.plot(np.array([-0.1,1]))
+        plt.plot(np.array([-2,1]),np.array([-2,1]))
     plt.tight_layout()
     plt.show()
 
-def plot_compare_electrodes_subset(mlp_model, mlp_dataset, mlp_test_loader, tcn_model, tcn_dataset, tcn_test_loader, electrode_subset, rng):
+def plot_distributions(model, dataset, test_loader, conv, nrows=12, ncols=8, bins = 20, size1 = 30, size2 = 35, density = False):
+    '''
+    Plots distributions of targets and predictions in histograms subplot.
+
+    Args:
+        model: trained model used to generate predictions.
+        dataset: the full dataset corresponding to test_loader. 
+        test_loader: dataloader with the test set of interest.
+        conv (bool): True for TempCNN, False for MLP.
+        nrows, ncols (int): number of rows and columns in subplots.
+        bins (int): number of bins for the histogram.
+        size1, size2 (int): specifies dimensions of the subplot.
+    '''
+    criterion = torch.nn.MSELoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+    test_loss, test_R2, test_pr2, test_preds, test_targets = test(test_loader, model, optimizer, criterion, dataset.num_neural_units, conv = conv)
+
+    dataset_array_output = data_loading.convert_osim_dataset_to_array(dataset)
+    dom = depth_of_modulation(dataset_array_output[1])
+
+    f, ax = plt.subplots(nrows, ncols)
+    f.subplots_adjust(top=0.97)
+    f.set_size_inches(size1, size2)
+    test_target_dist_lst = []
+    test_pred_dist_lst = []
+    pr2 = get_pr2(test_targets, test_preds, return_electrodes = True)
+    for k in range(nrows*ncols):
+        dom_elec = round(dom[k], 2)
+        pr2_elec = round(pr2[k], 3)
+        assert test_targets[:,k].shape == test_preds[:,k].shape
+        r2_elec = round(r2_score(test_targets[:,k], test_preds[:,k]),3)
+        i = k-(int(k/ncols)*ncols)
+        j = int(k/ncols)
+        ax[j][i].hist(test_targets[:,k], bins = bins, alpha = 0.4)
+        test_target_dist = np.histogram(test_targets[:,k], bins=bins, density=density)
+        ax[j][i].hist(test_preds[:,k], bins = test_target_dist[1], alpha = 0.4)
+        test_pred_dist = np.histogram(test_preds[:,k], bins=test_target_dist[1], density=density)
+        test_target_dist_lst.append(test_target_dist)
+        test_pred_dist_lst.append(test_pred_dist)
+        # kld = calc_kld(test_target_dist, test_pred_dist)
+        ax[j][i].set_xlabel('Firing Rate')
+        ax[j][i].set_ylabel('Count')
+        ax[j][i].set_title('Electrode {}\nDOM: {:.3f}\nR2: {}, pR2: {:.3f}'.format(k, dom_elec, r2_elec, pr2_elec))
+    f.legend(labels=['Targets', 'Predictions'], loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.tight_layout()
+    plt.show()
+
+    return(test_target_dist_lst, test_pred_dist_lst)
+
+def plot_compare_electrodes_subset(date, mlp_model, mlp_good_range_arrays, tcn_model, tcn_good_range_arrays, electrode_subset):
     '''
     Plots the targets and predictions for a subset of electrodes for a TCN and MLP side-by-side in two columns.
 
-
     Args:
         mlp_model, tcn_model (FCNet, TempConvNet): Trained MLP and TCN models used to generate predictions.
-        mlp_dataset, tcn_dataset (torch.utils.data.Dataset): full datasets corresponding to test loaders.
-        mlp_test_loader, tcn_test_loader (torch.utils.data.DataLoader): test loaders containing data for their respective models.
+        mlp_good_range_arrays, tcn_good_range_arrays (tuple): tuple containing input and output arrays of good range in dataset.
         electrode_subset (list): list of electrode indices to be plotted.
-        rng (tuple): contains the upper and lower bounds of the range in time you'd like to plot for each electrode.
     '''
+    inp_mlp = torch.from_numpy(tcn_good_range_arrays[0]).float()
+    mlp_test_targets = tcn_good_range_arrays[1]
+    inp_tcn = torch.from_numpy(tcn_good_range_arrays[0]).float().t().unsqueeze(0)
+    tcn_test_targets = tcn_good_range_arrays[1]
+    if date in ['20210712', '20210710', '20211105']:
+        mlp_test_targets *= 30
 
-    criterion = torch.nn.MSELoss()
-    optimizer_mlp = torch.optim.Adam(mlp_model.parameters(), lr=0.001)
-    optimizer_tcn = torch.optim.Adam(tcn_model.parameters(), lr=0.001)
-    mlp_test_loss, mlp_test_R2, mlp_test_pr2, mlp_test_preds, mlp_test_targets = test(mlp_test_loader, mlp_model, optimizer_mlp, criterion, mlp_dataset.num_neural_units, conv = True)
-    tcn_test_loss, tcn_test_R2, tcn_test_pr2, tcn_test_preds, tcn_test_targets = test(tcn_test_loader, tcn_model, optimizer_tcn, criterion, tcn_dataset.num_neural_units, conv = True)
+    with torch.no_grad():
+        mlp_test_preds = mlp_model(inp_mlp)
+        tcn_test_preds = tcn_model(inp_tcn).squeeze(0)
 
-    nrows, ncols = len(electrode_subset), 2
+    if date == '20211105':
+        mlp_test_preds /= 30
+
+    nrows, ncols = len(electrode_subset), 1
     f, ax = plt.subplots(nrows, ncols)
     f.subplots_adjust(top=0.97)
-    f.set_size_inches(30, nrows*3)
+    f.set_size_inches(20, nrows*3)
     test_target_dist_lst = []
     test_pred_dist_lst = []
     mlp_pr2 = get_pr2(mlp_test_targets, mlp_test_preds, return_electrodes = True)
@@ -448,25 +514,18 @@ def plot_compare_electrodes_subset(mlp_model, mlp_dataset, mlp_test_loader, tcn_
     for ind, k in enumerate(electrode_subset):
         mlp_pr2_elec = round(mlp_pr2[k], 3)
         tcn_pr2_elec = round(tcn_pr2[k], 3)
-        # assert test_targets[:,k].shape == test_preds[:,k].shape
+
         mlp_r2 = round(r2_score(mlp_test_targets[:,k], mlp_test_preds[:,k]),3)
         tcn_r2 = round(r2_score(tcn_test_targets[:,k], tcn_test_preds[:,k]),3)
 
-        ax[ind][0].plot(mlp_test_targets[rng[0]:rng[1],k], label = 'Targets')
-        ax[ind][0].plot(mlp_test_preds[rng[0]:rng[1],k], label = 'Predictions')
+        ax[ind].plot(mlp_test_targets[:,k], label = 'Targets')
+        ax[ind].plot(mlp_test_preds[:,k], label = 'MLP Predictions')
+        ax[ind].plot(tcn_test_preds[:,k], label = 'TCN Predictions')
 
-        ax[ind][1].plot(tcn_test_targets[rng[0]:rng[1],k], label = 'Targets')
-        ax[ind][1].plot(tcn_test_preds[rng[0]:rng[1],k], label = 'Predictions')
-
-        ax[ind][0].set_xlabel('Frames')
-        ax[ind][0].set_ylabel('Firing Rate')
-        ax[ind][0].set_title('MLP Electrode {}\nR2: {}, pR2: {:.3f}'.format(k, mlp_r2, mlp_pr2_elec))
-        ax[ind][0].legend()
-
-        ax[ind][1].set_xlabel('Frames')
-        ax[ind][1].set_ylabel('Firing Rate')
-        ax[ind][1].set_title('TCN Electrode {}\nR2: {}, pR2: {:.3f}'.format(k, tcn_r2, tcn_pr2_elec))
-        ax[ind][1].legend()
+        ax[ind].set_xlabel('Frames')
+        ax[ind].set_ylabel('Firing Rate')
+        ax[ind].set_title('{} Electrode {}\nMLP pR2: {:.3f}, TCN pR2 {:.3f}'.format(date, k, mlp_pr2_elec, tcn_pr2_elec))
+        ax[ind].legend(bbox_to_anchor=(1, 0.5), loc = 'center left')
     plt.tight_layout()
     plt.show()
 
@@ -491,7 +550,7 @@ def plot_targets_and_preds_agnostic(model, good_inp, good_out, electrodes_list, 
 
 ################################ AUXILLIARY/LESS IMPORTANT FUNCTIONS ################################
 
-def depth_of_modulation(arr, top = 0.95, bottom = 0.05):
+def depth_of_modulation(arr, top = 0.95, bottom = 0.05, return_top_n = 0):
     '''
     Calculates the depth of modulation (DOM) by electrode of a set of targets.
     Calculated by finding the difference value of the signal between the "top" and "bottom" percentile values.
@@ -512,7 +571,14 @@ def depth_of_modulation(arr, top = 0.95, bottom = 0.05):
         bottom_perc = int(len(unit_sorted)*bottom)
         dom = unit_sorted[top_perc] - unit_sorted[bottom_perc]
         doms.append(dom)
-    return(np.array(doms))
+    dom = np.array(doms)
+    if return_top_n == 0:
+        return(dom)
+    else:
+        sorted_indices = np.argsort(dom)[::-1]
+        top_indices = sorted_indices[:return_top_n]
+        dom = dom[top_indices]
+        return(dom, top_indices)
 
 def plot_mean_std_comparison(model, dataset, test_loader, conv, bins = 20):
     '''
@@ -753,39 +819,39 @@ def plot_r2(model, dataset, test_loader, conv, bins = 20):
     plt.show()
     return(np.array(r2_elect))
 
-def plot_distributions(model, dataset, test_loader, conv, nrows=12, ncols=8, bins = 20, density = False):
+def plot_pc1_distribution(model, dataset, test_loader, conv, include_preds = True, bins = 200):
+    '''
+    Plots a histogram of the distribution of the first principal component of firing rates of a dataset. By default, it also plots predictions of a model over the real data.
+
+    Args:
+        model: Trained model used to generate predictions.
+        dataset: Full datasets corresponding to test_loaders.
+        test_loader: dataloader containing data from the test sets of interest.
+        conv (bool): True for TCN, False for MLP.
+        include_preds (bool): If True, histogram of predictions is plotted.
+        bins (int): number of bins used for histogram(s).
+    '''
     criterion = torch.nn.MSELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
     test_loss, test_R2, test_pr2, test_preds, test_targets = test(test_loader, model, optimizer, criterion, dataset.num_neural_units, conv = conv)
 
-    f, ax = plt.subplots(nrows, ncols)
-    f.subplots_adjust(top=0.97)
-    f.set_size_inches(30, 35)
-    test_target_dist_lst = []
-    test_pred_dist_lst = []
-    pr2 = get_pr2(test_targets, test_preds, return_electrodes = True)
-    for k in range(nrows*ncols):
-        pr2_elec = round(pr2[k], 3)
-        assert test_targets[:,k].shape == test_preds[:,k].shape
-        r2 = round(r2_score(test_targets[:,k], test_preds[:,k]),3)
-        # print('Electrode {} - Target Shape: {}, Pred Shape: {}'.format(k, test_targets[:,k].shape, test_preds[:,k].shape))
-        i = k-(int(k/ncols)*ncols)
-        j = int(k/ncols)
-        ax[j][i].hist(test_targets[:,k], bins = bins, alpha = 0.4, label = 'Targets')
-        test_target_dist = np.histogram(test_targets[:,k], bins=bins, density=density)
-        ax[j][i].hist(test_preds[:,k], bins = test_target_dist[1], alpha = 0.4, label = 'Predictions')
-        test_pred_dist = np.histogram(test_preds[:,k], bins=test_target_dist[1], density=density)
-        test_target_dist_lst.append(test_target_dist)
-        test_pred_dist_lst.append(test_pred_dist)
-        # kld = calc_kld(test_target_dist, test_pred_dist)
-        ax[j][i].set_xlabel('Firing Rate')
-        ax[j][i].set_ylabel('Count')
-        ax[j][i].set_title('Electrode {}\nR2: {}, pR2: {:.3f}'.format(k, r2, pr2_elec))
-        ax[j][i].legend()
+    pca_targets = PCA(n_components=1)
+    pca_preds = PCA(n_components=1)
+    test_targets_features = pca_targets.fit_transform(test_targets)
+    test_preds_features = pca_preds.fit_transform(test_preds)
+
+    plt.hist(test_targets_features, alpha = 0.4, bins = bins, label = 'Targets')
+    test_target_dist = np.histogram(test_targets_features, bins=bins)
+    if include_preds == True:
+        plt.hist(test_preds_features, alpha = 0.4, bins = test_target_dist[1], label = 'Predictions')
+    
+    plt.title('{} {} Firing Rate PC1 Distribution'.format(dataset.date, model.name))
+    plt.xlabel('Firing Rate PC1')
+    plt.ylabel('Count')
+    plt.legend()
+
     plt.tight_layout()
     plt.show()
-
-    return(test_target_dist_lst, test_pred_dist_lst)
 
 def plot_compare_distributions_subset(mlp_model, mlp_dataset, mlp_test_loader, tcn_model, tcn_dataset, tcn_test_loader, electrode_subset, bins = 20, density = False):
     '''

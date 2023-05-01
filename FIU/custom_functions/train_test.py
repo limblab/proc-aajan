@@ -28,11 +28,9 @@ class RBFKernel(nn.Module):
     def forward(self, X, Y):
         """
         Computes the RBF kernel matrix between two sets of vectors X and Y.
-
         Args:
             X: A PyTorch tensor of shape (m, d), where m is the number of vectors and d is the dimensionality of each vector.
             Y: A PyTorch tensor of shape (n, d), where n is the number of vectors and d is the dimensionality of each vector.
-
         Returns:
             A PyTorch tensor of shape (m, n) containing the RBF kernel matrix.
         """
@@ -60,11 +58,9 @@ class MMDLoss(nn.Module):
     def forward(self, x, y):
         """
         Computes the Maximum Mean Discrepancy (MMD) between two distributions x and y.
-
         Args:
             x: A PyTorch tensor of shape (m, d), where m is the number of samples and d is the dimensionality of each sample.
             y: A PyTorch tensor of shape (n, d), where n is the number of samples and d is the dimensionality of each sample.
-
         Returns:
             A scalar tensor representing the MMD between the two distributions.
         """
@@ -77,7 +73,6 @@ class MMDLoss(nn.Module):
 def train(loader, model, optimizer, criterion, scheduler, conv = False):
     '''
     Training function for any model.
-
     Args:
         loader: data loader where each instance a tuple with input/target/sample numbers.
         model: model to be tested.
@@ -110,14 +105,12 @@ def train(loader, model, optimizer, criterion, scheduler, conv = False):
 def test(loader, model, optimizer, criterion, num_neural_units, conv = False):
     '''
     Testing function for any model.
-
     Args:
         loader: data loader where each instance a tuple with input/target/sample numbers.
         model: model to be tested.
         criterion: loss function.
         num_neural_units (int): the number of electrodes and dimensionality of the target data.
         conv (bool): Set to False when testing a MLP, True when testing a TCN.
-
     Returns:
         avg_loss_epoch (float): average loss per epoch.
         r2_tot_batch (float): r2 for the entire dataset.
@@ -153,3 +146,46 @@ def test(loader, model, optimizer, criterion, num_neural_units, conv = False):
     pr2_tot_batch = get_pr2(output_tot, pred_tot)
     
     return(avg_loss_epoch, r2_tot_batch, pr2_tot_batch, pred_tot, output_tot)
+
+
+def get_instance_losses(loader, model, num_neural_units, criterion = torch.nn.MSELoss(reduction='none'),conv = False):
+    '''
+    Testing function for any model.
+
+    Args:
+        loader: data loader where each instance a tuple with input/target/sample numbers.
+        model: model to be tested.
+        criterion: loss function.
+        num_neural_units (int): the number of electrodes and dimensionality of the target data.
+        conv (bool): Set to False when testing a MLP, True when testing a TCN.
+
+    Returns:
+        avg_loss_epoch (float): average loss per epoch.
+        r2_tot_batch (float): r2 for the entire dataset.
+        pr2_tot_batch (float): pr2 for the entire dataset.
+        pred_tot (np.array): NxD array containing all the predictions of the model.
+        output_tot (np.array): NxD array containing all the targets of the dataset.
+    '''
+    model.eval()
+    batch_losses = []
+    pred_tot = []
+    output_tot = []
+    losses = []
+
+    with torch.no_grad():
+        for i, (input, target, sample_nums) in enumerate(loader):
+            input = input.to(device, dtype=torch.float)
+            target = target.to(device, dtype=torch.float)
+            pred = model(input)
+
+            loss = criterion(pred, target)  
+            all_losses_batch = criterion(pred, target)  # calculate loss
+            all_losses_batch = all_losses_batch.detach().cpu().data.numpy()
+            
+            pred_tot += pred
+            output_tot += target
+            losses.append(all_losses_batch)
+
+    all_losses = np.vstack(losses)
+
+    return(all_losses)

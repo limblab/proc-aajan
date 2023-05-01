@@ -9,16 +9,16 @@ params.bin_width = 0.001;
 params.sorted = 1;
 params.requires_raw_emg = 0;
 params.save_waveforms = 0;
-map_dir = 'Z:\limblab\User_folders\Aajan\'; %the folder that contains the .cmp map file
-map_name = 'SN 6250-002339.cmp'; %the name of the map file
+map_dir = 'Z:\limblab\User_folders\Aajan\';                                                             %the folder that contains the .cmp map file
+map_name = 'SN 6250-002339.cmp';                                                                        %the name of the map file
 
 
 ################################################
 
 ## This will change with every file.
 
-file_dir = 'Z:\limblab\User_folders\Aajan\neural_data_for_FIU\withmot\fullyrestrained\20210928\'; %the folder containing the .nev, .nsx, and .mot files.
-file_name = '20210928_Pop_FR_001'; %the name used for the .nev, .nsx, and .mot files. Remember, this should be the same for all 3.
+file_dir = 'Z:\limblab\User_folders\Aajan\neural_data_for_FIU\withmot\fullyrestrained\20210928\';       %the folder containing the .nev, .nsx, and .mot files.
+file_name = '20210928_Pop_FR_001';                                                                      %the name used for the .nev, .nsx, and .mot files. Remember, this should be the same for all 3.
 
 xds = raw_to_xds(file_dir, file_name, map_dir, map_name, params);
 matfile_dir = strcat(file_dir, file_name, '.mat');

@@ -21,7 +21,7 @@ from torch import nn
 import torch.nn.functional as F
 
 #custom modules
-from models import FCNet, TempConvNet
+from models import FCNet, TempConvNet, Autoencoder
 from train_test import train, test, MMDLoss
 from pr2 import get_pr2
 import r2_pr2
@@ -190,7 +190,9 @@ def plot_losses_TempCNN(dataset, train_loader, test_loader, learning_rate, num_c
 
     return(model)
 
-def plot_losses_transfer_learning_TCN(dataset_dict, loader_dict, num_permutations, init_lr, lr_factor, num_epochs = 101):
+
+
+def plot_losses_transfer_learning_TCN_split(dataset_dict, loader_dict, num_permutations, init_lr, lr_factor, num_epochs = 101):
     '''
     Trains multiple TCNs in transfer learning. The model is trained in the following way:
     
@@ -317,6 +319,137 @@ def plot_losses_transfer_learning_TCN(dataset_dict, loader_dict, num_permutation
 
     return(models)
 
+def plot_losses_transfer_learning_TCN(dataset_dict, loader_dict, num_permutations, init_lr, lr_factor, save = True, num_conv_layers = 3,  num_epochs = 101, restraint_type = 'fullyrestrained'):
+    '''
+    Trains multiple TCNs in transfer learning. The model is trained in the following way:
+    
+    A set of random permutations of dates and splits is created.
+    All permutations for the splits are flattened into a list - since I made 3 splits, this makes a list of 18 integers.
+    A subset of 18 permutations for dates is chosen.
+    The learning rate begins at init_lr for all layers, and then decreased for the core of the model (i.e. the convolutional layers) by a factor of lr_factor each time the split number changes.
+    The transfer layer is alwyas trained with an initial learning rate of init_lr.
+
+    Below is an example of how the models are trained:
+        Split 0, Date Permutation 0 (e.g. '20210712', '20220309', '20210710', '20211105', '20210814'), transfer layer lr = 0.001, core initial learning rate = 0.001
+        Split 1, Date Permutation 1 (e.g. '20210710', '20211105', '20210814', '20210712', '20220309'), transfer layer lr = 0.001, core initial learning rate = 0.001*lr_factor
+        Split 2, Date Permutation 2 (e.g. '20210814', '20210712', '20220309', '20210710', '20211105'), transfer layer lr = 0.001, core initial learning rate = 0.001*(lr_factor^2)
+        Split 1, Date Permutation 3 (e.g. '20220309', '20210712', '20211105', '20210710', '20210814'), transfer layer lr = 0.001, core initial learning rate = 0.001*(lr_factor^3)
+        Split 2, Date Permutation 3 (e.g. '20211105', '20210710', '20210712', '20210814', '20220309'), transfer layer lr = 0.001, core initial learning rate = 0.001*(lr_factor^4)
+        Split 0, Date Permutation 3 (e.g. '20220309', '20211105', '20210814', '20210712', '20210710'), transfer layer lr = 0.001, core initial learning rate = 0.001*(lr_factor^5)
+        etc...
+    After 18 rounds, the final learning rate for the core layers is 0.001*(lr_factor^18). For lr_factor = 0.7, this equates to 1.6e-6.
+
+    Args:
+        dataset_dict (dict): a dictionary containing datasets that are split by electrode.
+        loader_dict (dict): a dictionary containing train and test loaders that are also split by electrode.
+        init_lr (float): the initial learning rate for the convolutional layers.
+        lr_factor (float): the factor by which the initial learning rate is decayed every permutation.
+        num_epochs (int): number of epochs each model is trained each permutation.
+
+    Returns:
+        A dictionary containing all the models for each date/split.
+    '''
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    dates = np.array(list(dataset_dict.keys()))
+    all_perms = [dates]
+    for i in range(5):
+        arr = np.arange(len(dates_list))
+        np.random.shuffle(arr)
+        all_perms.append(dates[arr])
+
+    losses = {'All Losses': {},'By Dataset': {}}
+    losses['All Losses'][lr_factor] = {'Train': [], 'Test': []}
+    losses['By Dataset'][lr_factor] = {'Train': {},'Test': {}}
+    for date in loader_dict.keys():
+        for train_test_str in losses['By Dataset'][lr_factor].keys():
+            losses['By Dataset'][lr_factor][train_test_str][date] = []
+
+    models = {}
+    for date in dataset_dict.keys():
+        models[date] = {}
+        for input_type in dataset_dict[date].keys():
+            models[date][input_type] = {}
+    
+    date0 = all_perms[0][0]
+    output_dim = dataset_dict[date0]['Joint Angles']['Full'].num_neural_units
+    model = TempConvNet(24, output_dim, num_conv_layers, 1, 5, 2, add_relu = True, causal=True).to(device)
+
+    # get randomly initialized linear layers
+    linear_layers = {}
+    for date in dataset_dict.keys():
+        output_dim = dataset_dict[date]['Joint Angles']['Full'].num_neural_units
+        m = TempConvNet(24, output_dim, num_conv_layers, 1, 5, 2, add_relu = True, causal=True).to(device)
+        linear_layers[date] = m.net[-2]
+
+    c = -1
+    for iteration, perm in enumerate(all_perms):
+        for i, date in enumerate(perm):
+            c+=1
+            model.net[-2] = linear_layers[date]
+
+            train_loader, test_loader, full_dataset = \
+                loader_dict[date]['Joint Angles']['Train'], \
+                loader_dict[date]['Joint Angles']['Test'], \
+                dataset_dict[date]['Joint Angles']['Full']
+
+            print(date,full_dataset.num_neural_units)
+
+            lr = init_lr*(lr_factor**(c))
+            criterion = torch.nn.MSELoss()
+            optimizer = torch.optim.Adam([
+                {'params': model.net[0].parameters(), 'lr': lr},
+                {'params': model.net[2].parameters(), 'lr': lr},
+                {'params': model.net[4].parameters(), 'lr': lr},
+                {'params': model.net[6].parameters(), 'lr': 0.001}])
+            scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.8, patience=8, min_lr=0.0)   
+            total_params = sum(p.numel() for p in model.parameters())
+
+            print('Date: {}, Initial LR: {} '.format(date,lr))
+            print('Num Conv Layers: {}, Total Parameters: {}'\
+                .format(model.num_conv_layers, total_params))
+
+            start = time.time()
+            for epoch in range(num_epochs):
+                lr = scheduler.optimizer.param_groups[0]['lr']
+                train_loss = train(train_loader, model, optimizer, criterion, scheduler, conv = True)
+                _, train_R2, train_pr2, train_preds, train_targets = test(train_loader, model, optimizer, criterion, full_dataset.num_neural_units, conv = True)
+                test_loss, test_R2, test_pr2, test_preds, test_targets = test(test_loader, model, optimizer, criterion, full_dataset.num_neural_units, conv = True)
+                scheduler.step(test_loss)
+                if epoch % 50==0:
+                  print('Epoch: {:03d}, LR: {:7f}, Train Loss: {:7f}, Test Loss: {:7f}. Train R2: {:.7f}, Test R2: {:.7f}, Train pR2: {:.7f}, Test pR2: {:.7f}'\
+                      .format(epoch, lr, train_loss, test_loss, train_R2, test_R2, train_pr2, test_pr2))
+
+                losses['All Losses'][lr_factor]['Train'].append(train_loss)
+                losses['All Losses'][lr_factor]['Test'].append(test_loss)
+                losses['By Dataset'][lr_factor]['Train'][date].append(train_loss)
+                losses['By Dataset'][lr_factor]['Test'][date].append(test_loss)
+
+            end = time.time()
+            print('Time to train model: {}'.format(end-start))
+            plt.plot(losses['By Dataset'][lr_factor]['Train'][date])
+            plt.plot(losses['By Dataset'][lr_factor]['Test'][date])
+            plt.title('Losses - Date: {}, Num Conv Layers: {}'.format(date, model.num_conv_layers))
+            plt.xlabel('Epochs')
+            plt.ylabel('Loss')
+            plt.legend(['Train Losses', 'Test Losses'])
+            plt.show()
+
+            # replace linear layer with most recently trained
+            linear_layers[date] = model.net[-2]
+
+            models[date]['Joint Angles'] = model
+
+            if iteration == num_permutations-1:
+                directory = '/content/drive/My Drive/Miller_Lab/FIU/Temporal_CNN/Pop_FR_OpenSIM/TransferLearning/NonSplit/{}/'.format(restraint_type)
+                model_name = 'TempCNN_{}_{}_convlayers_reluadded'.format(date, num_conv_layers)
+                if save == True:
+                    if os.path.exists(directory) == False:
+                        os.makedirs(directory)
+                    torch.save(model.state_dict(), directory+model_name)
+
+    return(models)
+
 def plot_and_compare_ks(model_1_name, model1, dataset1, test_loader1, conv1, model_2_name, model2, dataset2, test_loader2, conv2, restraint_type, exclude_bad_neurons = False, bins = 20, split = False):
     '''
     Plots a two histograms of the Kolomogrov-Smirnov statistic for each electrode - one histogram for each trained model. 
@@ -369,7 +502,7 @@ def plot_and_compare_ks(model_1_name, model1, dataset1, test_loader1, conv1, mod
     plt.show()
     return(np.mean(ks_elect_1),np.mean(ks_elect_2))
 
-def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model_2_name, model2, dataset2, test_loader2, conv2, restraint_type, exclude_bad_neurons = False, frac = 0.5, max_dom = 101, split = False):
+def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model_2_name, model2, dataset2, test_loader2, conv2, restraint_type, exclude_bad_neurons = False, frac = 0.5, min_plot_val = 0, split = False):
     '''
     Plots a scatterplot of the pR^2 values of two models. This is one of my most often-used functions for comparing models.
     Values on the x-axis correspond to model1, values on the y-axis correspond to model2.
@@ -383,7 +516,6 @@ def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model
         restraint_type (str): fullyrestrained or semirestrained.
         exclude_bad_neurons (bool): when False, all electrodes are plotted. when True, a subset of "good" electrodes are plotted. Good electrodes are those where model2's pR^2 values are greater than 0.
                                     There's probably a better way to do this, but I haven't thought of anything.
-        max_dom (int): used soled for standardizing color bars across plots from different datasets. I standardize them manually, but you could find a better way to do it.
     '''
 
     pr2_by_neuron_model1 = r2_pr2.get_all_pr2(model1, dataset1, test_loader1, conv = conv1)
@@ -395,23 +527,23 @@ def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model
     num_inds = int(len(dom)*frac)
     top_indices = sorted_indices[:num_inds]
 
+    dom = dom*100/np.max(dom)
+
     if exclude_bad_neurons == False:
-        dom = np.append(dom, np.array([0,max_dom]))
         pr2_model1_copy, pr2_model2_copy = np.copy(pr2_by_neuron_model1), np.copy(pr2_by_neuron_model2)
-        pr2_model1_copy = np.append(pr2_model1_copy, np.array([0.001,0.001]))
-        pr2_model2_copy = np.append(pr2_model2_copy, np.array([0.5,0.5]))
     else: 
         pr2_model1_copy, pr2_model2_copy = np.copy(pr2_by_neuron_model1), np.copy(pr2_by_neuron_model2)
         dom = dom[top_indices]
-        dom = np.append(dom, np.array([0,max_dom]))
+        dom = np.append(dom, np.array([0]))
         pr2_model1_copy, pr2_model2_copy = pr2_model1_copy[top_indices], pr2_model2_copy[top_indices]
-        pr2_model1_copy = np.append(pr2_model1_copy, np.array([-1,-1]))
-        pr2_model2_copy = np.append(pr2_model2_copy, np.array([-1,-1]))
+        pr2_model1_copy = np.append(pr2_model1_copy, np.array([-1]))
+        pr2_model2_copy = np.append(pr2_model2_copy, np.array([-1]))
 
     print('{} average pR2: {}'.format(model_1_name, np.mean(pr2_model1_copy)))
     print('{} average pR2: {}'.format(model_2_name, np.mean(pr2_model2_copy)))
 
-    plt.scatter(pr2_model2_copy,pr2_model1_copy,c=dom, cmap=plt.cm.viridis)
+
+    plt.scatter(pr2_model2_copy,pr2_model1_copy,c=dom, cmap=plt.cm.viridisd)
     plt.xlabel('{} PR2'.format(model_2_name))
     plt.ylabel('{} PR2'.format(model_1_name))
     if split == True:
@@ -419,15 +551,18 @@ def compare_pr2_plots(model_1_name, model1, dataset1, test_loader1, conv1, model
     else:
         plt.title('PR2 Comparison by Electrode - {}\n{}'.format(dataset2.date, restraint_type))
     cbar = plt.colorbar()
-    cbar.set_label('Depth of Modulation', labelpad=20, rotation=270)
+    cbar.set_label('Standardized Depth of Modulation', labelpad=20, rotation=270)
     mn,mx = np.min(pr2_model1_copy), np.max(pr2_model1_copy)
-    if exclude_bad_neurons ==False:
-        plt.xlim([mn-2, mx+1])
-        plt.ylim([mn-2, mx+1])
-    else:
+    if exclude_bad_neurons == True:
         plt.xlim([-0.1, mx+0.15])
         plt.ylim([-0.1, mx+0.15])
         plt.plot(np.array([-2,1]),np.array([-2,1]))
+    elif min_plot_val == 0:
+        plt.xlim([mn-2, mx+1])
+        plt.ylim([mn-2, mx+1])
+    else:
+        plt.xlim([min_plot_val, mx+0.1])
+        plt.ylim([min_plot_val, mx+0.1])
     plt.tight_layout()
     plt.show()
 
@@ -493,15 +628,15 @@ def plot_compare_electrodes_subset(date, mlp_model, mlp_good_range_arrays, tcn_m
     mlp_test_targets = tcn_good_range_arrays[1]
     inp_tcn = torch.from_numpy(tcn_good_range_arrays[0]).float().t().unsqueeze(0)
     tcn_test_targets = tcn_good_range_arrays[1]
-    if date in ['20210712', '20210710', '20211105']:
-        mlp_test_targets *= 30
+    # if date in ['20210712', '20210710', '20211105']:
+    #     mlp_test_targets *= 30
 
     with torch.no_grad():
         mlp_test_preds = mlp_model(inp_mlp)
         tcn_test_preds = tcn_model(inp_tcn).squeeze(0)
 
-    if date == '20211105':
-        mlp_test_preds /= 30
+    # if date == '20211105':
+    #     mlp_test_preds /= 30
 
     nrows, ncols = len(electrode_subset), 1
     f, ax = plt.subplots(nrows, ncols)
@@ -525,6 +660,45 @@ def plot_compare_electrodes_subset(date, mlp_model, mlp_good_range_arrays, tcn_m
         ax[ind].set_xlabel('Frames')
         ax[ind].set_ylabel('Firing Rate')
         ax[ind].set_title('{} Electrode {}\nMLP pR2: {:.3f}, TCN pR2 {:.3f}'.format(date, k, mlp_pr2_elec, tcn_pr2_elec))
+        ax[ind].legend(bbox_to_anchor=(1, 0.5), loc = 'center left')
+    plt.tight_layout()
+    plt.show()
+
+def plot_compare_electrodes_subset_tl(date, tcn_tl_model, tcn_model, tcn_good_range_arrays, electrode_subset):
+    '''
+    Plots the targets and predictions for a subset of electrodes for a TCN and MLP side-by-side in two columns.
+
+    Args:
+        mlp_model, tcn_model (FCNet, TempConvNet): Trained MLP and TCN models used to generate predictions.
+        mlp_good_range_arrays, tcn_good_range_arrays (tuple): tuple containing input and output arrays of good range in dataset.
+        electrode_subset (list): list of electrode indices to be plotted.
+    '''
+    inp_tcn = torch.from_numpy(tcn_good_range_arrays[0]).float().t().unsqueeze(0)
+    tcn_test_targets = tcn_good_range_arrays[1]
+
+    with torch.no_grad():
+        tcn_tl_test_preds = tcn_tl_model(inp_tcn).squeeze(0)
+        tcn_test_preds = tcn_model(inp_tcn).squeeze(0)
+
+    nrows, ncols = len(electrode_subset), 1
+    f, ax = plt.subplots(nrows, ncols)
+    f.subplots_adjust(top=0.97)
+    f.set_size_inches(20, nrows*3)
+    test_target_dist_lst = []
+    test_pred_dist_lst = []
+    tcn_tl_pr2 = get_pr2(tcn_test_targets, tcn_tl_test_preds, return_electrodes = True)
+    tcn_pr2 = get_pr2(tcn_test_targets, tcn_test_preds, return_electrodes = True)
+    for ind, k in enumerate(electrode_subset):
+        tcn_tl_pr2_elec = round(tcn_tl_pr2[k], 3)
+        tcn_pr2_elec = round(tcn_pr2[k], 3)
+
+        ax[ind].plot(tcn_test_targets[:,k], label = 'Targets')
+        ax[ind].plot(tcn_tl_test_preds[:,k], label = 'TCN TL Predictions')
+        ax[ind].plot(tcn_test_preds[:,k], label = 'TCN Predictions')
+
+        ax[ind].set_xlabel('Frames')
+        ax[ind].set_ylabel('Firing Rate')
+        ax[ind].set_title('{} Electrode {}\nTCN TL pR2: {:.3f}, TCN pR2 {:.3f}'.format(date, k, tcn_tl_pr2, tcn_pr2_elec))
         ax[ind].legend(bbox_to_anchor=(1, 0.5), loc = 'center left')
     plt.tight_layout()
     plt.show()
@@ -905,3 +1079,84 @@ def plot_compare_distributions_subset(mlp_model, mlp_dataset, mlp_test_loader, t
         ax[ind][1].legend()
     plt.tight_layout()
     plt.show()
+
+############################# AUTOENCODER STUFF #############################
+
+def plot_losses_AE(dataset, train_loader, test_loader, learning_rate, num_layers, latent_space_dim = 10, add_relu = True, adapt_lr = True, save = True, numepochs = 101, split = 'NonSplit', loss_type = 'mse_loss', restraint_type='fullyrestrained'):
+    '''
+    Trains a MLP, plots the train and test loss curves, and saves the model in the directory specified.
+    
+    Args:
+        dataset (torch.utils.data.Dataset): full dataset corresponding to the train and test dataloaders.
+        train_loader (torch.utils.data.DataLoader): training data used to train model.
+        test_loader (torch.utils.data.DataLoader): testing data used to test model.
+        learning_rate (float): the initial learning rate 
+        num_layers (int): the number of fully connected layers in the model 
+        add_relu (bool): this gives you the option of adding a relu layer at the end. The default is True since we're trying to predict non-negative firing rates.
+        save (bool): when True, the model is saved in the specified directory.
+        adapt_lr (bool): when True, the learning rate will change according to the learning rate scheduler below. When False, a constant learning rate is used.
+        split (str): 'SplitNeurons' or 'NonSplit'. Used only for saving different models in different directories. 
+        loss_type (str): 'mse_loss' or 'mmd_loss'. MMD loss minimizes the Maximum Mean Discrepancy between the targets and predictions.
+        restraint_type (str): 'fullyrestrained' or 'semirestrained'. Used only for saving different models in different directories.
+
+    Returns:
+        Trained MLP model.
+    '''
+
+    model = Autoencoder(dataset.num_neural_units, latent_space_dim, num_enc_layers, add_relu = add_relu)
+
+    Autoencoder(input_dim=dataset.num_neural_units, latent_space_dim=dataset.num_neural_units, \
+                  num_layers=num_layers, hidden_layer_dim=hidden_layer_dim, add_relu = add_relu)
+
+    if loss_type == 'mse_loss':
+        criterion = torch.nn.MSELoss()
+    elif loss_type == 'mmd_loss':
+        criterion = MMDLoss(sigma=1.0)
+
+    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.8, patience=8, min_lr=0.00005)
+    total_params = sum(p.numel() for p in model.parameters())
+
+    print('{}, full dataset'.format(model.name))
+    print('Num Layers: {}, Hidden Layer Dimensionality: {}, Total Parameters: {}'\
+        .format(model.num_layers, model.hidden_layer_dim, total_params))
+
+    train_losses = []
+    val_losses = []
+    test_losses = []
+    start = time.time()
+    for epoch in range(numepochs):
+        lr = scheduler.optimizer.param_groups[0]['lr']
+        train_loss = train(train_loader, model, optimizer, criterion, scheduler)
+        _, train_R2, train_pr2, train_preds, train_targets = test(train_loader, model, optimizer, criterion, dataset.num_neural_units)
+        test_loss, test_R2, test_pr2, test_preds, test_targets = test(test_loader, model, optimizer, criterion, dataset.num_neural_units)
+        if adapt_lr == True:
+            scheduler.step(test_loss)
+        if epoch % 50==0:
+            print('Epoch: {:03d}, LR: {:7f}, Train Loss: {:7f}, Test Loss: {:7f}. Train R2: {:.7f}, Test R2: {:.7f}, Train pR2: {:.7f}, Test pR2: {:.7f}'\
+                  .format(epoch, lr, train_loss, test_loss, train_R2, test_R2, train_pr2, test_pr2))
+        train_losses.append(train_loss)
+        test_losses.append(test_loss)
+    end = time.time()
+    print('Time to train model: {}'.format(end-start))
+
+    plt.plot(train_losses)
+    plt.plot(test_losses)
+    plt.title('Losses - Date: {}, Model: {}, Encoder Layers: {}'.format(dataset.date, model.name, model.num_layers))
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend(['Train Losses', 'Test Losses'])
+    plt.show()
+
+
+    directory = '/content/drive/My Drive/Miller_Lab/FIU/AE/Pop_FR_OpenSIM/{}/{}/{}/{}/'.format(split,restraint_type,loss_type,dataset.date)
+    if split == 'NonSplit':
+        model_name = 'AE_{}_{}_{}_layers_reluadded'.format(dataset.date,dataset.input_type,model.num_layers)
+    elif split == 'SplitNeurons':
+        model_name = '{}/AE_{}_{}_layers'.format(dataset.split_num,dataset.input_type,model.num_layers)
+    if save == True:
+        if os.path.exists(directory) == False:
+            os.makedirs(directory)
+        torch.save(model.state_dict(), directory+model_name)
+
+    return(model)

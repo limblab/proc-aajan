@@ -189,3 +189,35 @@ def get_instance_losses(loader, model, num_neural_units, criterion = torch.nn.MS
     all_losses = np.vstack(losses)
 
     return(all_losses)
+
+def train_ae(loader, model, optimizer, criterion, scheduler):
+    '''
+    Training function for any model.
+    Args:
+        loader: data loader where each instance a tuple with input/target/sample numbers.
+        model: model to be tested.
+        optimizer: optimizer algorithm used to calculate the gradient.
+        criterion: loss function.
+        num_neural_units (int): the number of electrodes and dimensionality of the target data.
+        conv (bool): Set to False when testing a MLP, True when testing a TCN.
+    Returns:
+        avg_loss_epoch (float): average loss per epoch.
+    '''
+    model.train()
+    batch_losses = []
+
+    for i, (input, target, sample_num) in enumerate(loader):
+        optimizer.zero_grad() #clear gradient
+        input = input.to(device, dtype=torch.float)
+        target = target.to(device, dtype=torch.float)
+        
+        pred = model(input)
+        loss = criterion(pred, target)  # calculate loss
+        mean_batch_loss = loss.item()
+        batch_losses.append(mean_batch_loss)
+
+        loss.backward()  # one backward pass
+        optimizer.step()  # update the parameters
+
+    avg_loss_epoch = sum(batch_losses)/len(batch_losses)
+    return(avg_loss_epoch)

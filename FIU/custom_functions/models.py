@@ -123,3 +123,43 @@ class TempConvNet(torch.nn.Module):
                 x = layer(x)
             # print('Shape before: {}, shape after: {}'.format(shape_before, shape_after))
         return(x)
+
+class AutoEncoder(torch.nn.Module):
+    '''
+    The AutoEncoder class.
+
+    Args: 
+        input_dim (int): number of landmarks/joints/velocities.
+        latent_space_dim (int): dimensionality of latent vector.
+        num_enc_layers (int): number of layers in the encoder. The number of layers in the decoder is the same.
+        add_relu (bool): this gives you the option to add a relu layer at the end of the decoder. Since we're predicting non-negative firing rates, default is set to True.
+    '''
+    def __init__(self, input_dim, latent_space_dim, num_enc_layers, add_relu = True):
+        super(AutoEncoder, self).__init__()
+        self.name = 'AutoEncoder'
+        self.encoder = nn.ModuleList()
+        self.decoder = nn.ModuleList()
+        self.num_layers = num_layers
+        self.hidden_layer_dim = hidden_layer_dim
+
+        enc_layer_dims = np.round(np.linspace(input_dim, latent_space_dim, num_enc_layers+2)).astype(int)
+        dec_layer_dims = enc_layer_dims[::-1]
+
+        for i in range(num_enc_layers):
+            self.encoder.append(nn.Linear(enc_layer_dims[i], enc_layer_dims[i+1]))
+            self.encoder.append(nn.ReLU())
+
+            self.decoder.append(nn.Linear(dec_layer_dims[i], dec_layer_dims[i+1]))
+            self.decoder.append(nn.ReLU())
+
+        self.encoder = self.encoder[:-1] #remove last relu layer from encoder
+        if add_relu == False:
+            self.decoder = self.decoder[:-1]
+
+        self.net = nn.ModuleList([self.encoder, self.decoder])
+
+    def forward(self, x):
+        for coder in self.net:
+            for layer in coder:
+                x = layer(x)
+        return(x)

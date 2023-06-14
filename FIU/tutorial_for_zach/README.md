@@ -16,7 +16,9 @@ If you plan on using OpenSIM joint angles, you'll need to learn how to use Xuan'
 
 In order to make the .mat file with joint angle and neural data, 3 files are needed: a .nev file, a .nsx file, and a .mot file. The .nev file contains neural spike events; the .mot file is the output of the OpenSIM model containing joint angles. They must be placed in a folder and must have the exact same name (minus the extension) in order for the XDS conversion to work. A screenshot with an example folder called "example_folder_xds" is available (note the .mat will show up after the conversion is done). 
 
-The function you'll use to run the conversion is raw_to_xds.m in xds_matlab. I've added a file called xds_notes.txt with each of the arguments necessary to run this function. Running raw_to_xds.m will produce a structure containing neural events in the spike_counts field and kinematic data in the joint_angles field. This structure will have the same name as the raw data files. When saving the structure, ensure you add '-v7.3' as an argument - this will save it in a format readable to h5py.
+The function you'll use to run the conversion is raw_to_xds.m in xds_matlab. I've added a file called xds_notes.txt with each of the arguments necessary to run this function. Running raw_to_xds.m will produce a structure containing neural events in the spike_counts field and kinematic data in the joint_angles field. This structure will have the same name as the raw data files. 
+
+**Important**: When saving the structure, ensure you add '-v7.3' as an argument - this will save it in a format readable to h5py.
 
 ## **Step 2: Preprocessing XDS File (in Python)**
 

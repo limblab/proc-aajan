@@ -6,8 +6,8 @@ params.task_name = 'FR';
 params.ran_by = 'KLB';
 params.lab = 1;
 params.bin_width = 0.001;
-params.sorted = 1;
-params.requires_raw_emg = 0;
+params.sorted = 0;
+params.requires_raw_emg = 1;
 params.save_waveforms = 0;
 map_dir = 'Z:\limblab\User_folders\Aajan\';                                                             %the folder that contains the .cmp map file
 map_name = 'SN 6250-002339.cmp';                                                                        %the name of the map file
@@ -29,4 +29,5 @@ save(matfile_dir, 'xds','-v7.3');
 THINGS TO REMEMBER:
 Put ClassyDataAnalysis in your path. 
 Make sure there's a "\" at the end of file_dir, otherwise it'll say it can't find the directory.
+Use the right value for sorted - 1 if sorted, 0 if unsorted. Using the wrong value will make spike_counts empty.
 Always add the '-v7.3' argument to save, otherwise you'll have loading issues in python.
